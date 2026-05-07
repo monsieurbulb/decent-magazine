@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en" id="root-html"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Decent — Issue 2: The Infrastructure of Autonomy</title>
 <meta name="description" content="Decent Magazine Issue 2: The Infrastructure of Autonomy">
@@ -22,10 +22,14 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
   .spg>div{padding:8vh 6vw!important;}
 }
 @media print{html{scroll-snap-type:none;}.spread{page-break-after:always;min-height:auto;padding:2cm;}}
+#lang-picker{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end;max-width:220px;}
+#lang-picker button{font-family:Inter,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;padding:.3rem .65rem;border:1px solid rgba(255,255,255,.25);background:rgba(10,10,10,.75);color:rgba(255,255,255,.55);cursor:pointer;border-radius:2px;backdrop-filter:blur(6px);transition:all .15s;text-transform:uppercase;}
+#lang-picker button:hover{color:#fff;border-color:rgba(255,255,255,.6);}
+#lang-picker button.active{color:#fff;border-color:#fff;background:rgba(255,255,255,.12);}
 </style></head><body>
-<section class="spread" style="background:#0a0a0a;color:#fff;">
-        <div style="position:absolute;top:8vh;left:8vw;font-size:1.2rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:0.4;">Issue 2</div>
-        <div style="position:absolute;top:8vh;right:8vw;font-size:1.2rem;font-weight:500;opacity:0.4;">May 2026</div>
+<section class="spread" style="background:#0a0a0a;color:#fff;" lang="en">
+        <div style="position:absolute;top:8vh;left:8vw;font-size:1.2rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:0.4;"><span data-i18n="issue">Issue</span> 2</div>
+        <div style="position:absolute;top:8vh;right:8vw;font-size:1.2rem;font-weight:500;opacity:0.4;"><span data-i18n-date="2026-05-01">May 2026</span></div>
         <div style="margin-bottom:6vh;">
             <h1 class="d" style="font-size:clamp(5rem,14vw,12rem);line-height:.9;font-weight:900;letter-spacing:-.03em;">DECENT</h1>
             <div style="width:120px;height:4px;background:#ff3333;margin:3rem 0;"></div>
@@ -33,7 +37,7 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
             <p style="font-size:1.4rem;line-height:1.6;opacity:0.7;max-width:40ch;margin-top:3rem;">This issue asks a question that used to be academic and is now operational: who controls the systems you depend on? From France ordering every ministry off Windows to open-source AI models outperforming proprietary ones, from AI agents that can buy things with your credit card to community-run alternatives to Big Tech — the infrastructure of autonomy is being built, contested, and occasionally seized. These ten pieces map the territory.</p>
         </div>
         <div style="margin-top:auto;padding-top:4vh;border-top:1px solid rgba(255,255,255,.1);">
-            <div style="font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:0.35;margin-bottom:2rem;">Contents</div>
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:0.35;margin-bottom:2rem;"><span data-i18n="contents">Contents</span></div>
             <div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
             <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">01</span>
             <span style="font-size:1.4rem;font-weight:500;">France Orders Every Ministry Off Windows</span>
@@ -79,19 +83,21 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
     </section><section class="spread" style="background:#0a0a0a;color:#fff;">
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,50vw,40rem);font-weight:900;opacity:.04;line-height:1;pointer-events:none;">01</div>
         <div style="position:relative;z-index:1;max-width:52ch;">
-            <div style="font-size:1.1rem;font-weight:700;color:#ff3333;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;">Story 01</div>
+            <div style="font-size:1.1rem;font-weight:700;color:#ff3333;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="story">Story</span> 01</div>
             <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);line-height:1;font-weight:900;margin-bottom:2rem;">France Orders Every Ministry Off Windows</h2>
             <div style="width:80px;height:3px;background:#ff3333;margin-bottom:2rem;"></div>
             <div style="font-size:1.3rem;line-height:1.8;opacity:.85;max-width:45ch;"><p>In April 2026, France&#x27;s Interministerial Digital Directorate announced that it is migrating all government workstations from Windows to Linux and has ordered every ministry to formalise plans to eliminate extra-European digital dependencies by autumn 2026. This follows January&#x27;s mandate to replace Microsoft Teams and Zoom with the domestic Visio platform across 2.5 million civil servants by 2027.</p><p>Anne Le Hénanff, Minister Delegate for Artificial Intelligence and Digital Technology, framed it plainly: &#x27;Digital sovereignty is not an option, it is a strategic necessity.&#x27; David Amiel, Minister of Public Action and Accounts, was blunter still: France &#x27;can no longer accept that our data, our infrastructure, and our strategic decisions depend on solutions whose rules, pricing, evolution, and risks we do not control.&#x27;</p><p>This is the most comprehensive digital sovereignty measure the French state has yet announced, and it raises an uncomfortable question for every other government. If your operating system, your video calls, your document collaboration, and your cloud storage all route through servers controlled by companies answerable to foreign courts, what exactly do you govern? France is answering that question with action. Whether the execution matches the ambition will be the story of the next eighteen months — but the precedent is already set.</p></div>
+            
             <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#ff3333;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://thenextweb.com/news/france-linux-windows-migration-digital-sovereignty" target="_blank" rel="noopener" style="font-size:1.15rem;color:#ff3333;text-decoration:underline;text-underline-offset:4px;">thenextweb.com/news/france-linux-windows-migration-digital-s</a></div>
         </div>
     </section><section class="spread" style="background:#0d1b2a;color:#e0d8c8;">
         <div style="position:absolute;top:6vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(6rem,15vw,10rem);font-weight:100;color:#c9a84c;opacity:.25;line-height:1;">02</div>
         <div style="max-width:55ch;position:relative;z-index:1;">
-            <div style="font-size:1rem;font-weight:600;color:#c9a84c;letter-spacing:.3em;text-transform:uppercase;margin-bottom:3rem;">Chapter 2</div>
+            <div style="font-size:1rem;font-weight:600;color:#c9a84c;letter-spacing:.3em;text-transform:uppercase;margin-bottom:3rem;"><span data-i18n="chapter">Chapter</span> 2</div>
             <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);line-height:1.05;font-weight:800;font-style:italic;margin-bottom:2.5rem;">DeepSeek V4 and the Open-Source Ratchet</h2>
             <blockquote style="border-left:4px solid #c9a84c;padding-left:2rem;margin:2.5rem 0;font-family:Fraunces,serif;font-size:2rem;font-style:italic;line-height:1.4;opacity:0.9;">"When frontier models are open, the value shifts from access to application."</blockquote>
             <div style="font-size:1.3rem;line-height:1.9;opacity:.85;"><p>DeepSeek released a preview of V4, its long-awaited follow-up model, just days after Moonshot AI introduced Kimi 2.6. Both are open source. Both claim benchmark-beating performance in coding, reasoning, and agentic tasks. And both are Chinese.</p><p>The pattern is now unmistakable: Chinese AI labs are open-sourcing their most powerful models at a pace that American labs — with their billion-dollar compute budgets and increasingly closed architectures — cannot easily match. DeepSeek&#x27;s V4 introduces what it calls a Hybrid Attention Architecture, improving the ability of an AI to remember context across long conversations. This isn&#x27;t incremental. This is the kind of architectural innovation that, in a proprietary world, would be locked behind an API paywall for years.</p><p>The strategic implications are significant. When frontier models are open, the value shifts from access to application — from who can build the model to who can build the best thing on top of it. That&#x27;s a fundamentally different game, and it&#x27;s one that favours distributed, agile players over centralised incumbents. The open-source ratchet only turns one way.</p></div>
+            
             <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#c9a84c;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://www.nytimes.com/2026/04/24/business/china-ai-deepseek-open-source.html" target="_blank" rel="noopener" style="font-size:1.15rem;color:#c9a84c;text-decoration:underline;text-underline-offset:4px;">www.nytimes.com/2026/04/24/business/china-ai-deepseek-open-s</a></div>
         </div>
     </section><section class="spread" style="background:#e8c4b8;color:#2d0a0a;text-align:center;">
@@ -119,7 +125,7 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
     </section><section class="spread" style="background:#f5f0e8;color:#1a1a1a;">
         <div style="max-width:58ch;">
             <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1rem;">
-                <span style="font-family:Fraunces,serif;font-size:1.2rem;color:#8b0000;font-weight:600;">No. 5</span>
+                <span style="font-family:Fraunces,serif;font-size:1.2rem;color:#8b0000;font-weight:600;"><span data-i18n="no">No.</span> 5</span>
                 <span style="flex:1;height:1px;background:#8b0000;opacity:.3;"></span>
             </div>
             <h2 class="d" style="font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;font-weight:800;margin-bottom:3rem;">The Tax on Knowing</h2>
@@ -132,10 +138,11 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
         </div>
     </section><section class="spread" style="background:#1a1a2e;color:#fff;text-align:center;align-items:center;">
         <div style="max-width:60ch;margin:0 auto;">
-            <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#e94560;margin-bottom:2rem;">Story 06</div>
-            <div class="d" style="font-size:clamp(8rem,25vw,20rem);font-weight:900;line-height:.85;color:#e94560;margin-bottom:2rem;letter-spacing:-.05em;">18–22× forward revenue: Cloudflare&#x27;s bet on the agentic internet</div>
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#e94560;margin-bottom:2rem;"><span data-i18n="story">Story</span> 06</div>
+            <div class="d" style="font-size:clamp(8rem,25vw,20rem);font-weight:900;line-height:.85;color:#e94560;margin-bottom:2rem;letter-spacing:-.05em;">18\u201322\u00d7 forward revenue: Cloudflare&#x27;s bet on the agentic internet</div>
             <h2 class="d" style="font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:2rem;line-height:1.1;">Decentralised AI: Value Capture Without the Infrastructure</h2>
             <div style="font-size:1.3rem;line-height:1.8;opacity:.8;max-width:45ch;margin:0 auto;"><p>Forbes ran a piece this month asking a question that deserves more attention: as AI infrastructure scales, who captures the value?</p><p>The honest answer, for now, is the cloud providers. AWS, Azure, and Google Cloud capture the overwhelming majority of revenue from AI workloads. The models get the headlines. The infrastructure gets the money.</p><p>Decentralised AI projects are attempting to change this equation. ZeroStack, for instance, has positioned itself as a platform to accumulate yield-generating assets in the decentralised AI space. &#x27;Demand for AI compute is really outpacing centralised supply,&#x27; says its lead. But he&#x27;s also candid: &#x27;Decentralised AI cannot compete on speed.&#x27;</p><p>That distinction matters. Decentralised compute is not a replacement for centralised compute — it&#x27;s a complement, useful for workloads that prioritise resilience, privacy, or cost over raw latency. The mistake is positioning it as a challenger to AWS. The opportunity is positioning it as an alternative for the workloads that don&#x27;t need AWS — and there are more of those than most people think.</p><p>The real question isn&#x27;t technical. It&#x27;s political. If AI becomes foundational infrastructure — like electricity, like the internet — then the governance of that infrastructure determines who benefits. Centralised infrastructure concentrates benefit. Decentralised infrastructure distributes it. That&#x27;s not a technology choice. It&#x27;s a values choice.</p></div>
+            
             <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#e94560;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://www.forbes.com/sites/digital-assets/2026/04/13/as-ai-infrastructure-scales-who-captures-the-value/" target="_blank" rel="noopener" style="font-size:1.15rem;color:#e94560;text-decoration:underline;text-underline-offset:4px;">www.forbes.com/sites/digital-assets/2026/04/13/as-ai-infrast</a></div>
         </div>
     </section><section class="spread sp" style="background:#fff;color:#0a0a0a;padding:0;">
@@ -162,7 +169,7 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
         <div style="position:absolute;bottom:8vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(10rem,25vw,18rem);font-weight:100;opacity:.1;line-height:1;pointer-events:none;">09</div>
         <div style="max-width:50ch;margin-left:auto;position:relative;z-index:1;">
             <div style="text-align:right;">
-                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:2rem;">Part 9</div>
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:2rem;"><span data-i18n="part">Part</span> 9</div>
                 <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);font-weight:800;line-height:1.05;margin-bottom:2rem;">Australia&#x27;s Big Tech Levy and the News Bargaining Code</h2>
                 <div style="width:80px;height:3px;background:#5c3d2e;margin-left:auto;margin-bottom:2.5rem;"></div>
             </div>
@@ -182,18 +189,63 @@ p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
     </section><section class="spread" style="background:#0a0a0a;color:#fff;justify-content:flex-end;">
         <div>
             <div style="opacity:.3;margin-bottom:4rem;">
-                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-bottom:2rem;">Contributors</div>
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="contributors">Contributors</span></div>
                 <div style="font-size:1.2rem;margin-bottom:.5rem;">Decent Editorial</div>
             </div>
             <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:3rem;">
                 <h3 class="d" style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem;">DECENT</h3>
-                <div style="font-size:1.2rem;opacity:.45;margin-bottom:.5rem;">Issue 2 · May 2026</div>
-                <div style="font-size:1.2rem;opacity:.45;margin-bottom:2rem;">Theme: The Infrastructure of Autonomy</div>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:.5rem;"><span data-i18n="issue">Issue</span> 2 · <span data-i18n-date="2026-05-01">May 2026</span></div>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:2rem;"><span data-i18n="theme">Theme</span>: The Infrastructure of Autonomy</div>
                 <div style="font-size:1.15rem;opacity:.35;max-width:50ch;">
-                    Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.
-                    Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.
+                    <span data-i18n-html="blurb">Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.</span>
+                    <span data-i18n-html="submit">Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.</span>
                 </div>
             </div>
         </div>
     </section>
+<div id="lang-picker"></div>
+<script>
+(function(){
+  var T={"en": {"issue": "Issue", "contents": "Contents", "story": "Story", "chapter": "Chapter", "no": "No.", "part": "Part", "contributors": "Contributors", "theme": "Theme", "blurb": "Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.", "submit": "Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.", "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "space_reserved_title": "Space Reserved", "space_reserved_author": "The Editors", "space_reserved_content": "This space awaits a future contributor. Email richard@decent.partners with [Decent] in the subject."}, "es": {"issue": "Número", "contents": "Índice", "story": "Historia", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent es una revista mensual reunida a partir de contribuciones de una red distribuida de colaboradores.", "submit": "Envía tu texto para el próximo número: escribe a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> en el asunto.", "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], "space_reserved_title": "Espacio Reservado", "space_reserved_author": "Los Editores", "space_reserved_content": "Este espacio aguarda a un futuro colaborador. Escribe a richard@decent.partners con [Decent] en el asunto."}, "fr": {"issue": "Numéro", "contents": "Sommaire", "story": "Histoire", "chapter": "Chapitre", "no": "N°", "part": "Partie", "contributors": "Contributeurs", "theme": "Thème", "blurb": "Decent est un magazine mensuel composé de contributions d'un réseau distribué de collaborateurs.", "submit": "Soumettez à la prochaine édition : écrivez à <strong>richard@decent.partners</strong> avec <strong>[Decent]</strong> dans l'objet.", "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"], "space_reserved_title": "Espace Réservé", "space_reserved_author": "Les Éditeurs", "space_reserved_content": "Cet espace attend un futur contributeur. Écrivez à richard@decent.partners avec [Decent] dans l'objet."}, "pt": {"issue": "Edição", "contents": "Sumário", "story": "História", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent é uma revista mensal reunida a partir de contribuições de uma rede distribuída de colaboradores.", "submit": "Envie para a próxima edição: escreva para <strong>richard@decent.partners</strong> com <strong>[Decent]</strong> no assunto.", "months": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"], "space_reserved_title": "Espaço Reservado", "space_reserved_author": "Os Editores", "space_reserved_content": "Este espaço aguarda um futuro colaborador. Escreva para richard@decent.partners com [Decent] no assunto."}, "de": {"issue": "Ausgabe", "contents": "Inhalt", "story": "Beitrag", "chapter": "Kapitel", "no": "Nr.", "part": "Teil", "contributors": "Mitwirkende", "theme": "Thema", "blurb": "Decent ist ein monatliches Magazin, das aus Beiträgen eines verteilten Netzwerks von Mitarbeitenden zusammengestellt wird.", "submit": "Einreichung für die nächste Ausgabe: E-Mail an <strong>richard@decent.partners</strong> mit <strong>[Decent]</strong> im Betreff.", "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], "space_reserved_title": "Platz Reserviert", "space_reserved_author": "Die Redaktion", "space_reserved_content": "Dieser Platz wartet auf einen zukünftigen Beitragenden. E-Mail an richard@decent.partners mit [Decent] im Betreff."}, "it": {"issue": "Numero", "contents": "Sommario", "story": "Storia", "chapter": "Capitolo", "no": "N.", "part": "Parte", "contributors": "Collaboratori", "theme": "Tema", "blurb": "Decent è una rivista mensile composta da contributi di una rete distribuita di collaboratori.", "submit": "Invia per il prossimo numero: scrivi a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> nell'oggetto.", "months": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], "space_reserved_title": "Spazio Riservato", "space_reserved_author": "I Redattori", "space_reserved_content": "Questo spazio attende un futuro collaboratore. Scrivi a richard@decent.partners con [Decent] nell'oggetto."}, "zh": {"issue": "期", "contents": "目录", "story": "故事", "chapter": "章节", "no": "第", "part": "部分", "contributors": "贡献者", "theme": "主题", "blurb": "Decent 是一本月刊，汇集来自分布式协作网络的投稿。", "submit": "投稿下一期：发送邮件至 <strong>richard@decent.partners</strong>，主题包含 <strong>[Decent]</strong>。", "months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"], "space_reserved_title": "预留空间", "space_reserved_author": "编辑部", "space_reserved_content": "此处等待未来的投稿人。请发邮件至 richard@decent.partners，主题包含 [Decent]。"}};
+  var LABELS={"en": "EN", "es": "ES", "fr": "FR", "pt": "PT", "de": "DE", "it": "IT", "zh": "中文"};
+  var defaultLang="en";
+  var cur=localStorage.getItem("dm-lang")||defaultLang;
+  function applyLang(l){
+    var t=T[l]||T[defaultLang];
+    cur=l;
+    localStorage.setItem("dm-lang",l);
+    document.getElementById("root-html").lang=l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k=el.dataset.i18n;
+      if(t[k]!==undefined)el.textContent=t[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+      var k=el.dataset.i18nHtml;
+      if(t[k]!==undefined)el.innerHTML=t[k];
+    });
+    document.querySelectorAll("[data-i18n-date]").forEach(function(el){
+      var d=el.dataset.i18nDate;
+      var parts=d.split("-");
+      if(parts.length>=2){
+        var m=parseInt(parts[1],10)-1;
+        var y=parts[0];
+        var months=t.months||T[defaultLang].months;
+        el.textContent=months[m]+" "+y;
+      }
+    });
+    document.querySelectorAll("#lang-picker button").forEach(function(b){
+      b.classList.toggle("active",b.dataset.lang===l);
+    });
+  }
+  var picker=document.getElementById("lang-picker");
+  Object.keys(LABELS).forEach(function(l){
+    var b=document.createElement("button");
+    b.textContent=LABELS[l];
+    b.dataset.lang=l;
+    b.onclick=function(){applyLang(l);};
+    picker.appendChild(b);
+  });
+  applyLang(cur);
+})();
+</script>
 </body></html>
