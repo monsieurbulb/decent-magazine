@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Decent &mdash; Issue N&deg; 01 &mdash; Origins</title>
+<meta name="description" content="Issue N&deg; 01 &mdash; Origins. Eleven pieces in five registers &mdash; essay, dispatch, fiction, doctrine, portrait &mdash; on the experiment of the next internet. May 2026." />
+<meta property="og:title" content="Decent &mdash; Issue N&deg; 01: Origins" />
+<meta property="og:description" content="Eleven pieces. Five registers. One conviction: the frames we use to understand money, identity, and territory are breaking. The people building new ones are designing what counts as real." />
+<meta property="og:image" content="/images/origins-klee-hero.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     DECENT &mdash; Issue N&deg; 01 / Origins
+     Bauhaus panel composition. Asymmetric. Hand-set.
+     ============================================================ */
+  :root {
+    --paper: #f4f0e6;
+    --paper-dim: #ebe5d5;
+    --paper-warm: #efe7d2;
+    --ink: #0a0908;
+    --ink-soft: #1f1c18;
+    --rule: #1a1918;
+    --rule-soft: rgba(10, 9, 8, 0.18);
+    --muted: #5a544a;
+
+    --vermilion: #d7361f;
+    --forest: #2b4c3f;
+    --signal: #f2c14e;
+    --ochre: #b97732;
+    --slate: #4a5366;
+    --cream: #efe6cc;
+    --rose: #c46f5e;
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-sans: 'Archivo', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 17px;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.32;
+    mix-blend-mode: multiply;
+    background-image:
+      radial-gradient(circle at 22% 28%, rgba(139, 119, 84, 0.07) 0%, transparent 42%),
+      radial-gradient(circle at 78% 72%, rgba(139, 119, 84, 0.05) 0%, transparent 47%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.35 0 0 0 0 0.25 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* ===== MASTHEAD ===== */
+  .masthead {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 13px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .masthead .logo {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .masthead .logo::after { content: "/"; color: var(--vermilion); margin-left: 1px; font-style: normal; }
+  .masthead nav { display: flex; gap: 22px; justify-self: end; }
+  .masthead nav a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  .masthead nav a:hover { color: var(--ink); }
+  .masthead nav a.primary { color: var(--vermilion); }
+  .masthead .strap { color: var(--muted); justify-self: center; font-size: 10px; }
+  .masthead .strap strong { color: var(--ink); font-weight: 700; }
+
+  /* ===== COVER PANEL ===== */
+  .cover {
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .cover-grid {
+    max-width: 1640px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 0;
+  }
+  .cover-image {
+    border-right: 1px solid var(--rule);
+    background: var(--paper-warm);
+    padding: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    overflow: hidden;
+  }
+  .cover-image::before {
+    content: "ISSUE Nº 01";
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--vermilion);
+    z-index: 2;
+  }
+  .cover-image::after {
+    content: "ORIGINS · MMXXVI";
+    position: absolute;
+    bottom: 22px;
+    right: 22px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ink);
+    z-index: 2;
+  }
+  .cover-image img {
+    display: block;
+    max-width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    filter: contrast(1.02) saturate(1.05);
+    box-shadow: 0 14px 38px rgba(10,9,8,0.18);
+  }
+  .cover-text {
+    padding: clamp(32px, 5vw, 64px) clamp(28px, 4vw, 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--paper);
+    position: relative;
+  }
+  .cover-stamp {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .cover-stamp strong { color: var(--ink); font-weight: 700; }
+  .cover-stamp .issn { color: var(--vermilion); }
+  .cover-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(64px, 11vw, 180px);
+    line-height: 0.84;
+    letter-spacing: -0.045em;
+    font-variation-settings: "opsz" 144;
+    margin: clamp(28px, 4vw, 52px) 0 clamp(18px, 2vw, 28px);
+    color: var(--ink);
+  }
+  .cover-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+    font-family: var(--font-serif);
+    font-size: 1.02em;
+  }
+  .cover-deck {
+    font-family: var(--font-serif);
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.32;
+    color: var(--ink);
+    max-width: 540px;
+  }
+  .cover-deck em { color: var(--vermilion); }
+
+  /* ===== REGISTERS RIBBON ===== */
+  .registers {
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    position: relative;
+    z-index: 2;
+  }
+  .registers-row {
+    max-width: 1640px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .reg-cell {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background 0.18s;
+    position: relative;
+  }
+  .reg-cell:last-child { border-right: 0; }
+  .reg-cell:hover { background: var(--paper-warm); }
+  .reg-cell .num {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+    color: var(--ink);
+    font-variation-settings: "opsz" 96;
+  }
+  .reg-cell .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .reg-cell .meta {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--muted);
+  }
+
+  /* ===== SECTION RAIL ===== */
+  .rail {
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 60px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: minmax(120px, 200px) 1fr auto;
+    gap: 32px;
+    align-items: end;
+    position: relative;
+    z-index: 2;
+  }
+  .rail .reg-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    font-weight: 700;
+  }
+  .rail h2 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 96;
+  }
+  .rail h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+    font-family: var(--font-serif);
+    font-size: 1.04em;
+  }
+  .rail .count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+  }
+  .rail .count strong { color: var(--ink); font-weight: 700; }
+
+  /* ===== BAUHAUS PANEL GRID ===== */
+  .panels {
+    max-width: 1640px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Featured: hero piece, big asymmetric */
+  .panel-featured {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .panel-featured-art {
+    position: relative;
+    background: var(--ink);
+    color: var(--paper);
+    border-right: 1px solid var(--rule);
+    overflow: hidden;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .panel-featured-art svg { width: 100%; height: 100%; min-height: 460px; }
+  .panel-featured-art .stamp {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    color: var(--signal);
+    z-index: 2;
+  }
+  .panel-featured-art .arrow {
+    position: absolute;
+    bottom: 22px;
+    right: 22px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    color: var(--paper);
+    z-index: 2;
+  }
+  .panel-featured-text {
+    padding: clamp(36px, 4vw, 60px) clamp(32px, 4vw, 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 28px;
+    background: var(--paper);
+  }
+  .panel-featured-kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .panel-featured-kicker strong { color: var(--vermilion); font-weight: 700; }
+  .panel-featured-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 0.95;
+    letter-spacing: -0.034em;
+    margin-bottom: 22px;
+    font-variation-settings: "opsz" 144;
+    color: var(--ink);
+  }
+  .panel-featured-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+    font-family: var(--font-serif);
+    font-size: 1.04em;
+  }
+  .panel-featured-title a { color: inherit; text-decoration: none; }
+  .panel-featured-title a:hover { color: var(--vermilion); }
+  .panel-featured-deck {
+    font-family: var(--font-serif);
+    font-size: clamp(19px, 2vw, 24px);
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .panel-featured-byline {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+  .panel-featured-byline strong { color: var(--ink); font-weight: 700; }
+  .read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 22px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.18s;
+    align-self: flex-start;
+  }
+  .read-btn:hover { background: var(--vermilion); }
+
+  /* Tile grid of pieces */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid var(--rule);
+  }
+  .tile {
+    grid-column: span 6;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: clamp(28px, 3vw, 44px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--paper);
+    position: relative;
+    transition: background 0.18s;
+  }
+  .tile:hover { background: var(--paper-warm); }
+  .tile:nth-child(2n) { border-right: 0; }
+  .tile-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .tile-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+    margin-bottom: 14px;
+    font-variation-settings: "opsz" 96;
+    color: var(--ink);
+  }
+  .tile-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+    font-family: var(--font-serif);
+    font-size: 1.04em;
+  }
+  .tile-deck {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    line-height: 1.42;
+    color: var(--ink);
+    margin-bottom: 18px;
+    max-width: 520px;
+  }
+  .tile-deck em { color: var(--vermilion); font-style: italic; }
+  .tile-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 14px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .tile-meta strong { color: var(--ink); font-weight: 700; }
+  .tile-meta .arrow { color: var(--vermilion); font-family: var(--font-display); }
+
+  /* Tinted tiles */
+  .tile.tile-cream { background: var(--cream); }
+  .tile.tile-cream:hover { background: #e9dfb9; }
+  .tile.tile-slate { background: #1a1d22; color: #e7e3d5; }
+  .tile.tile-slate:hover { background: #232730; }
+  .tile.tile-slate .tile-title,
+  .tile.tile-slate .tile-deck { color: #e7e3d5; }
+  .tile.tile-slate .tile-num { color: var(--signal); }
+  .tile.tile-slate .tile-meta { color: #998f7c; border-top-color: rgba(231,227,213,0.18); }
+  .tile.tile-slate .tile-meta strong { color: #e7e3d5; }
+  .tile.tile-slate .tile-meta .arrow { color: var(--signal); }
+  .tile.tile-slate .tile-title em { color: var(--signal); }
+  .tile.tile-slate .tile-deck em { color: var(--signal); }
+  .tile.tile-rose { background: #e9c8b9; }
+  .tile.tile-rose:hover { background: #e1bba9; }
+  .tile.tile-forest { background: #1d2d24; color: #e7e3d5; }
+  .tile.tile-forest:hover { background: #243a30; }
+  .tile.tile-forest .tile-title,
+  .tile.tile-forest .tile-deck { color: #e7e3d5; }
+  .tile.tile-forest .tile-num { color: var(--signal); }
+  .tile.tile-forest .tile-meta { color: #91a297; border-top-color: rgba(231,227,213,0.18); }
+  .tile.tile-forest .tile-meta strong { color: #e7e3d5; }
+  .tile.tile-forest .tile-meta .arrow { color: var(--signal); }
+  .tile.tile-forest .tile-title em { color: var(--signal); }
+  .tile.tile-forest .tile-deck em { color: var(--signal); }
+
+  /* Asymmetric panels */
+  .tile-wide { grid-column: span 12; border-right: 0; }
+  .tile-third { grid-column: span 4; min-height: 260px; }
+  .tile-third:nth-child(3n) { border-right: 0; }
+
+  /* Decorative panels */
+  .panel-deco {
+    grid-column: span 6;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: clamp(28px, 3vw, 44px);
+    background: var(--paper-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    position: relative;
+  }
+  .panel-deco svg { width: 100%; height: auto; max-height: 280px; }
+
+  /* Quote panel */
+  .panel-quote {
+    grid-column: span 6;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: clamp(36px, 4vw, 56px);
+    background: var(--vermilion);
+    color: #fff5e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    font-family: var(--font-serif);
+  }
+  .panel-quote .qmark {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 130px;
+    line-height: 0.5;
+    color: rgba(255,245,230,0.32);
+    margin-bottom: -10px;
+  }
+  .panel-quote q {
+    font-style: italic;
+    font-size: clamp(22px, 2.4vw, 32px);
+    line-height: 1.18;
+    quotes: "" "";
+  }
+  .panel-quote q::before, .panel-quote q::after { content: ""; }
+  .panel-quote .src {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,245,230,0.78);
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,245,230,0.32);
+  }
+
+  /* Cast strip */
+  .cast-strip {
+    max-width: 1640px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    z-index: 2;
+  }
+  .cast-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+  }
+  .cast-cell {
+    border-right: 1px solid var(--rule-soft);
+    padding: 22px 14px;
+    text-align: center;
+    background: var(--paper);
+    transition: background 0.18s;
+  }
+  .cast-cell:last-child { border-right: 0; }
+  .cast-cell:hover { background: var(--paper-warm); }
+  .cast-cell .name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin-bottom: 5px;
+    font-variation-settings: "opsz" 24;
+  }
+  .cast-cell .reg {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+  }
+  .cast-link-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .cast-link-row a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid var(--vermilion);
+    padding-bottom: 3px;
+  }
+  .cast-link-row a:hover { color: var(--vermilion); }
+
+  /* About + Issue 02 */
+  .about {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 90px 32px 60px;
+    position: relative;
+    z-index: 2;
+  }
+  .about .kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 22px;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .about h2 {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(32px, 3.8vw, 50px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-bottom: 28px;
+    color: var(--ink);
+  }
+  .about h2 em { color: var(--vermilion); }
+  .about p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 1.1em;
+    font-variation-settings: "opsz" 24;
+  }
+  .about p em { color: var(--vermilion); font-style: italic; }
+  .about .signoff {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  .about .signoff strong { color: var(--ink); font-weight: 700; }
+
+  .next-issue {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  .next-issue .top {
+    border-top: 3px double var(--rule);
+    padding-top: 50px;
+  }
+  .next-issue .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .next-issue .title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 16px;
+    font-variation-settings: "opsz" 96;
+  }
+  .next-issue .title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+    font-size: 1.06em;
+  }
+  .next-issue .deck {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 16px;
+  }
+  .next-issue .submit {
+    font-family: var(--font-display);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .next-issue .submit a {
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--vermilion);
+    text-underline-offset: 3px;
+  }
+
+  /* Subscribe */
+  .subscribe {
+    padding: 80px 32px 100px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid var(--rule);
+    background: var(--paper-warm);
+  }
+  .subscribe .kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin-bottom: 18px;
+  }
+  .subscribe h2 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(38px, 5vw, 72px);
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+    font-variation-settings: "opsz" 96;
+  }
+  .subscribe h2 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+    font-family: var(--font-serif);
+  }
+  .subscribe p {
+    font-family: var(--font-serif);
+    font-size: clamp(18px, 1.9vw, 22px);
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    line-height: 1.4;
+  }
+  .subscribe-form {
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    border: 2px solid var(--ink);
+    background: var(--paper);
+  }
+  .subscribe-form input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 0;
+    background: transparent;
+    font-family: var(--font-display);
+    font-size: 16px;
+    color: var(--ink);
+    outline: none;
+  }
+  .subscribe-form input::placeholder { color: var(--muted); font-style: italic; }
+  .subscribe-form button {
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+    padding: 0 26px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.18s;
+  }
+  .subscribe-form button:hover { background: var(--vermilion); }
+  .subscribe-status {
+    margin-top: 18px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    min-height: 16px;
+    color: var(--forest);
+  }
+  .subscribe-status.err { color: var(--vermilion); }
+  .subscribe-note {
+    margin-top: 22px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    gap: 22px;
+    flex-wrap: wrap;
+    background: var(--paper);
+    position: relative;
+    z-index: 2;
+  }
+  footer strong { color: var(--ink); font-weight: 700; }
+
+  /* ===== ISSUE 02 — DARK WINDOW =====
+     A complete tonal break from the rest of the page.
+     Different fontset (Space Grotesk / DM Mono).
+     Different palette (navy / cyan / magenta / off-white).
+     Different motion (scanner sweep, glitch, pulsing dot, marquee).
+     A glimpse of an issue that will feel nothing like this one. */
+  .issue02-window {
+    --i02-bg-1: #0a1024;
+    --i02-bg-2: #0d1228;
+    --i02-bg-3: #08081a;
+    --i02-fg: #eef2fa;
+    --i02-fg-dim: #8a93b0;
+    --i02-cyan: #5fd4ff;
+    --i02-magenta: #ff3aa1;
+    --i02-line: rgba(95, 212, 255, 0.18);
+    --i02-line-soft: rgba(95, 212, 255, 0.06);
+    --i02-display: 'Space Grotesk', system-ui, sans-serif;
+    --i02-mono: 'DM Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+    position: relative;
+    z-index: 2;
+    background:
+      radial-gradient(ellipse at 18% 20%, rgba(95,212,255,0.12), transparent 45%),
+      radial-gradient(ellipse at 82% 80%, rgba(255,58,161,0.10), transparent 50%),
+      linear-gradient(180deg, var(--i02-bg-1) 0%, var(--i02-bg-2) 60%, var(--i02-bg-3) 100%);
+    color: var(--i02-fg);
+    overflow: hidden;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: clamp(72px, 8vw, 120px) clamp(28px, 5vw, 64px);
+    isolation: isolate;
+  }
+
+  /* Background layer */
+  .i02-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .i02-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(0deg, var(--i02-line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--i02-line-soft) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: -1px -1px;
+    opacity: 0.7;
+  }
+  .i02-scanner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--i02-cyan) 30%, var(--i02-cyan) 70%, transparent 100%);
+    box-shadow: 0 0 22px var(--i02-cyan), 0 0 44px rgba(95,212,255,0.4);
+    opacity: 0.85;
+    animation: i02-sweep 7s linear infinite;
+  }
+  @keyframes i02-sweep {
+    0%   { transform: translateY(0); opacity: 0; }
+    8%   { opacity: 0.85; }
+    92%  { opacity: 0.85; }
+    100% { transform: translateY(100vh); opacity: 0; }
+  }
+
+  /* Card rail — marquee of identity fragments along the bottom */
+  .i02-card-rail {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 14px;
+    padding: 0 14px;
+    white-space: nowrap;
+    animation: i02-marquee 48s linear infinite;
+    opacity: 0.62;
+    will-change: transform;
+  }
+  @keyframes i02-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .i02-card {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 14px;
+    border: 1px dashed var(--i02-line);
+    background: rgba(10, 16, 36, 0.6);
+    backdrop-filter: blur(2px);
+    font-family: var(--i02-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    min-width: 158px;
+  }
+  .i02-card .ic-label {
+    color: var(--i02-cyan);
+    font-weight: 500;
+    font-size: 9px;
+    letter-spacing: 0.32em;
+  }
+  .i02-card .ic-val {
+    color: var(--i02-fg-dim);
+    font-weight: 400;
+  }
+
+  /* Content layer */
+  .i02-content {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .i02-tagline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-family: var(--i02-mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--i02-fg-dim);
+    margin-bottom: 28px;
+  }
+  .i02-tagline .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--i02-cyan);
+    box-shadow: 0 0 12px var(--i02-cyan);
+    animation: i02-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes i02-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(0.7); }
+  }
+  .i02-tagline .when {
+    margin-left: auto;
+    color: var(--i02-cyan);
+    font-weight: 500;
+  }
+
+  .i02-title {
+    font-family: var(--i02-display);
+    font-weight: 700;
+    font-size: clamp(72px, 14vw, 200px);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+    margin-bottom: 28px;
+    color: var(--i02-fg);
+    display: flex;
+    align-items: baseline;
+    gap: 0.05em;
+  }
+  .i02-glitch {
+    position: relative;
+    display: inline-block;
+  }
+  .i02-glitch::before,
+  .i02-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0.85;
+  }
+  .i02-glitch::before {
+    color: var(--i02-cyan);
+    transform: translate(-3px, 0);
+    mix-blend-mode: screen;
+    animation: i02-glitch-1 4.5s steps(1) infinite;
+  }
+  .i02-glitch::after {
+    color: var(--i02-magenta);
+    transform: translate(3px, 0);
+    mix-blend-mode: screen;
+    animation: i02-glitch-2 4.5s steps(1) infinite;
+  }
+  @keyframes i02-glitch-1 {
+    0%, 88%, 100% { transform: translate(-3px, 0); opacity: 0.85; clip-path: inset(0 0 0 0); }
+    90%           { transform: translate(-7px, -1px); opacity: 1; clip-path: inset(0 0 60% 0); }
+    93%           { transform: translate(-2px, 2px); opacity: 1; clip-path: inset(40% 0 20% 0); }
+    96%           { transform: translate(-5px, 0); opacity: 1; clip-path: inset(70% 0 0 0); }
+  }
+  @keyframes i02-glitch-2 {
+    0%, 88%, 100% { transform: translate(3px, 0); opacity: 0.85; clip-path: inset(0 0 0 0); }
+    90%           { transform: translate(7px, 1px); opacity: 1; clip-path: inset(0 0 60% 0); }
+    93%           { transform: translate(2px, -2px); opacity: 1; clip-path: inset(40% 0 20% 0); }
+    96%           { transform: translate(5px, 0); opacity: 1; clip-path: inset(70% 0 0 0); }
+  }
+  .i02-cursor {
+    color: var(--i02-cyan);
+    font-weight: 500;
+    margin-left: 0.04em;
+    animation: i02-blink 1.05s steps(2) infinite;
+    text-shadow: 0 0 12px var(--i02-cyan);
+  }
+  @keyframes i02-blink {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+
+  .i02-deck {
+    font-family: var(--i02-display);
+    font-weight: 400;
+    font-size: clamp(20px, 2.4vw, 30px);
+    line-height: 1.32;
+    color: var(--i02-fg);
+    max-width: 760px;
+    margin-bottom: 44px;
+  }
+  .i02-deck em {
+    font-style: italic;
+    color: var(--i02-cyan);
+    font-weight: 500;
+  }
+
+  .i02-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--i02-line);
+    border-bottom: 1px solid var(--i02-line);
+    margin-bottom: 44px;
+  }
+  .i02-meta > div {
+    padding: 18px 22px 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-right: 1px solid var(--i02-line);
+  }
+  .i02-meta > div:last-child { border-right: 0; padding-right: 0; }
+  .i02-meta .k {
+    font-family: var(--i02-mono);
+    font-size: 10px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--i02-cyan);
+    font-weight: 500;
+  }
+  .i02-meta .v {
+    font-family: var(--i02-display);
+    font-size: 16px;
+    color: var(--i02-fg);
+    font-weight: 400;
+  }
+
+  .i02-cta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 22px;
+    align-items: center;
+    padding: 22px 28px;
+    background: rgba(95, 212, 255, 0.04);
+    border: 1px solid var(--i02-cyan);
+    color: var(--i02-fg);
+    text-decoration: none;
+    transition: all 0.18s ease;
+    margin-bottom: 22px;
+    box-shadow:
+      inset 0 0 0 1px rgba(95,212,255,0.05),
+      0 0 0 0 rgba(95,212,255,0);
+  }
+  .i02-cta:hover {
+    background: var(--i02-cyan);
+    color: var(--i02-bg-1);
+    box-shadow: 0 0 32px rgba(95,212,255,0.3);
+  }
+  .i02-cta:hover .cta-eyebrow,
+  .i02-cta:hover .cta-line em { color: var(--i02-bg-1); }
+  .i02-cta .cta-eyebrow {
+    font-family: var(--i02-mono);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--i02-cyan);
+    font-weight: 500;
+    grid-column: 1 / -1;
+    margin-bottom: 6px;
+  }
+  .i02-cta .cta-line {
+    font-family: var(--i02-display);
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--i02-fg);
+    font-weight: 400;
+  }
+  .i02-cta .cta-line em {
+    font-style: italic;
+    color: var(--i02-cyan);
+  }
+  .i02-cta .cta-arrow {
+    font-family: var(--i02-display);
+    font-size: 32px;
+    line-height: 1;
+    color: var(--i02-cyan);
+    font-weight: 400;
+    transition: transform 0.18s ease;
+  }
+  .i02-cta:hover .cta-arrow { transform: translateX(6px); color: var(--i02-bg-1); }
+
+  .i02-fine {
+    font-family: var(--i02-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--i02-fg-dim);
+  }
+  .i02-fine strong { color: var(--i02-cyan); font-weight: 500; }
+
+  /* Reduced motion: respect users who don't want animation */
+  @media (prefers-reduced-motion: reduce) {
+    .i02-scanner,
+    .i02-card-rail,
+    .i02-glitch::before,
+    .i02-glitch::after,
+    .i02-cursor,
+    .i02-tagline .dot { animation: none; }
+    .i02-glitch::before,
+    .i02-glitch::after { display: none; }
+  }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .cover-grid { grid-template-columns: 1fr; }
+    .cover-image { border-right: 0; border-bottom: 1px solid var(--rule); min-height: 360px; }
+    .registers-row { grid-template-columns: repeat(5, 1fr); }
+    .reg-cell .num { font-size: 24px; }
+    .reg-cell .meta { font-size: 12px; }
+    .panel-featured { grid-template-columns: 1fr; }
+    .panel-featured-art { border-right: 0; border-bottom: 1px solid var(--rule); min-height: 320px; }
+    .tile { grid-column: span 12 !important; border-right: 0 !important; }
+    .panel-deco, .panel-quote { grid-column: span 12 !important; border-right: 0 !important; }
+    .cast-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .masthead { padding: 12px 18px; grid-template-columns: 1fr auto; gap: 10px; }
+    .masthead .strap { display: none; }
+    .masthead nav { gap: 12px; }
+    .masthead nav a { font-size: 9px; letter-spacing: 0.08em; }
+    .masthead nav .hide-mobile { display: none; }
+    .registers-row { grid-template-columns: repeat(2, 1fr); }
+    .reg-cell { border-bottom: 1px solid var(--rule); }
+    .rail { grid-template-columns: 1fr; padding: 36px 22px 18px; }
+    .rail .count { text-align: left; }
+    .cast-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .i02-meta { grid-template-columns: 1fr; }
+    .i02-meta > div { border-right: 0; border-bottom: 1px solid var(--i02-line); padding: 14px 0; }
+    .i02-meta > div:last-child { border-bottom: 0; }
+    .i02-cta { grid-template-columns: 1fr; }
+    .i02-cta .cta-arrow { justify-self: end; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <a class="logo" href="/">Decent</a>
+  <div class="strap"><strong>Issue N&deg; 01</strong> &middot; Origins &middot; May 2026</div>
+  <nav>
+    <a href="/" class="primary">Issue 01</a>
+    <a href="/contributors" class="hide-mobile" data-i18n="nav_contributors">Contributors</a>
+    <a href="#about" class="hide-mobile" data-i18n="nav_about">About</a>
+    <a href="#subscribe" data-i18n="nav_subscribe">Subscribe</a>
+  </nav>
+</header>
+
+<!-- ========== COVER ========== -->
+<section class="cover">
+  <div class="cover-grid">
+    <div class="cover-image">
+      <img src="https://decent-rw.zocomputer.io/images/origins-klee-hero.jpg" alt="Origins &mdash; cover artwork: stepped houses in burnt sienna under an ochre sun, a bird and a constellation" />
+    </div>
+    <div class="cover-text">
+      <div class="cover-stamp">
+        <span><strong>Decent</strong></span>
+        <span>ISSN <span class="issn">0000-0001</span></span>
+        <span>N&deg; <strong>01</strong> &middot; <strong>MMXXVI</strong></span>
+      </div>
+      <h1 class="cover-title">Origins<em>.</em></h1>
+      <p class="cover-deck">
+        Eleven pieces. Five registers. One conviction: the frames we use to understand money, identity, and territory are breaking. The people building new ones are doing more than designing markets &mdash; they are designing what counts as <em>real</em>.
+      </p>
+      <div class="cover-stamp" style="border-top:1px solid var(--rule); border-bottom:0; padding-top:16px; padding-bottom:0;">
+        <span>Cover by <strong>Decent</strong>, after Klee</span>
+        <span><strong>11</strong> contributors</span>
+        <span><strong>5</strong> registers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REGISTERS RIBBON ========== -->
+<nav class="registers" aria-label="Issue contents by register">
+  <div class="registers-row">
+    <a href="#essays" class="reg-cell">
+      <div class="num">06</div>
+      <div class="label">Essays</div>
+      <div class="meta">Argument from first principles</div>
+    </a>
+    <a href="#dispatches" class="reg-cell">
+      <div class="num">02</div>
+      <div class="label">Dispatches</div>
+      <div class="meta">From the working frontier</div>
+    </a>
+    <a href="#fiction" class="reg-cell">
+      <div class="num">01</div>
+      <div class="label">Fiction</div>
+      <div class="meta">Serialised across four issues</div>
+    </a>
+    <a href="#doctrine" class="reg-cell">
+      <div class="num">01</div>
+      <div class="label">Doctrine</div>
+      <div class="meta">A primary document, in public</div>
+    </a>
+    <a href="#portrait" class="reg-cell">
+      <div class="num">01</div>
+      <div class="label">Portrait</div>
+      <div class="meta">A figure from the long shelf</div>
+    </a>
+  </div>
+</nav>
+
+<!-- ========== ESSAYS ========== -->
+<section id="essays" class="panels">
+  <div class="rail">
+    <div class="reg-tag">&#9632; Essays</div>
+    <h2>Six pieces in <em>argument.</em></h2>
+    <div class="count">Pieces 01 / 06 &mdash; <strong>argument-led</strong></div>
+  </div>
+
+  <!-- FEATURED: Essay 1 -->
+  <article class="panel-featured">
+    <a class="panel-featured-art" href="/articles/relativistic-economics" aria-label="Read Relativistic Economics">
+      <span class="stamp">Essay N&deg; 1 &middot; Featured</span>
+      <svg viewBox="0 0 720 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="halo" cx="50%" cy="48%" r="60%">
+            <stop offset="0%" stop-color="#d7361f" stop-opacity="0.7"/>
+            <stop offset="100%" stop-color="#d7361f" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="720" height="480" fill="#0a0908"/>
+        <ellipse cx="360" cy="232" rx="280" ry="180" fill="url(#halo)"/>
+        <g stroke="#f2c14e" stroke-width="0.6" opacity="0.45" fill="none">
+          <path d="M40,140 Q220,40 400,180 T700,140"/>
+          <path d="M50,360 Q210,310 380,330 T700,360"/>
+          <path d="M120,80 Q300,220 460,240 T680,260"/>
+        </g>
+        <g fill="#efe6cc" opacity="0.85">
+          <circle cx="120" cy="140" r="2.5"/>
+          <circle cx="280" cy="92" r="2.5"/>
+          <circle cx="430" cy="178" r="2.5"/>
+          <circle cx="580" cy="120" r="2.5"/>
+          <circle cx="660" cy="184" r="2.5"/>
+        </g>
+        <g>
+          <circle cx="362" cy="232" r="46" fill="none" stroke="#2b4c3f" stroke-width="1.2"/>
+          <circle cx="362" cy="232" r="76" fill="none" stroke="#2b4c3f" stroke-width="0.6" opacity="0.55"/>
+          <circle cx="362" cy="232" r="112" fill="none" stroke="#2b4c3f" stroke-width="0.4" opacity="0.32"/>
+          <circle cx="368" cy="234" r="6" fill="#efe6cc"/>
+        </g>
+      </svg>
+      <span class="arrow">&rarr;</span>
+    </a>
+    <div class="panel-featured-text">
+      <div>
+        <div class="panel-featured-kicker"><strong>Essay N&deg; 1</strong> &middot; Value &amp; narrative &middot; &asymp; 10 min</div>
+        <h3 class="panel-featured-title"><a href="/articles/relativistic-economics">Relativistic <em>Economics.</em></a></h3>
+        <p class="panel-featured-deck">Value is not a property of objects. It is an observer-dependent relationship between a perceiver and an asset &mdash; and crypto is the first economic system built to acknowledge it.</p>
+      </div>
+      <div>
+        <div class="panel-featured-byline">
+          <span>By <strong>JbQmR…AbCdE</strong></span>
+          <span>Filed under <strong>Protocols, Narrative economics, Market design</strong></span>
+        </div>
+        <a class="read-btn" href="/articles/relativistic-economics">Read the essay &rarr;</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ESSAYS 2-6 in a Bauhaus grid with quote panels -->
+  <div class="grid">
+    <a class="tile" href="/articles/decent-pound">
+      <div>
+        <div class="tile-num">Essay N&deg; 2</div>
+        <h3 class="tile-title">What's In A <em>Pound.</em></h3>
+        <p class="tile-deck">The pound is not backed by a promise from Threadneedle Street. It is backed by the unacknowledged labour of carers, parents, teachers, builders &mdash; every contributor the national accounts chose not to count.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>HNZat…5UjfR</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile tile-cream" href="/articles/passports-bitcoin-seeds">
+      <div>
+        <div class="tile-num">Essay N&deg; 3</div>
+        <h3 class="tile-title">Passports, Bitcoin, <em>Seeds.</em></h3>
+        <p class="tile-deck">How identity scaled: from community memory, to state documents, to cryptographic keys &mdash; and how participation graphs offer a third path. <em>Identity as an emergent property of contribution.</em></p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>GpKmq…Z9qEn</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+
+    <aside class="panel-quote" aria-label="Pull quote from Issue 01">
+      <span class="qmark">&ldquo;</span>
+      <q>The next internet won't be a place you visit. It will be a place you're <em style="font-style:italic">from</em>.</q>
+      <div class="src">From <strong>The Network Is The Nation</strong> &middot; FtQjz…uRY3p</div>
+    </aside>
+
+    <a class="tile tile-rose" href="/articles/the-network-is-the-nation">
+      <div>
+        <div class="tile-num">Essay N&deg; 4</div>
+        <h3 class="tile-title">The Network Is The <em>Nation.</em></h3>
+        <p class="tile-deck">A living, generative reality assembled by crews of humans and models, bounded not by borders but by belief. Networks are about to become the most serious political objects of our lifetimes.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>FtQjz…uRY3p</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile" href="/articles/the-tax-on-knowing">
+      <div>
+        <div class="tile-num">Essay N&deg; 5</div>
+        <h3 class="tile-title">The Tax On <em>Knowing.</em></h3>
+        <p class="tile-deck">Income tax is dying. The proposal to replace it with a national tax on AI tokens is half right and shaped wrong. There is a better unit of account &mdash; the hex, the neighbourhood, the thing a community <em>knows</em>.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>DsRkG…Hcf2w</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile tile-cream" href="/articles/sovereign-authority">
+      <div>
+        <div class="tile-num">Essay N&deg; 6</div>
+        <h3 class="tile-title">Sovereign Authority in Emergent <em>Networks.</em></h3>
+        <p class="tile-deck">Sovereignty does not begin with a declaration. It is not an act of law, a victory, or a deed to a territory. It accretes &mdash; through activity, narrative, and the slow assembly of people who agree on who owes what to whom.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>EaHpK…UeVfk</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ========== DISPATCHES ========== -->
+<section id="dispatches" class="panels">
+  <div class="rail">
+    <div class="reg-tag">&#9650; Dispatches</div>
+    <h2>Two pieces from the <em>working frontier.</em></h2>
+    <div class="count">Pieces 07 / 08 &mdash; <strong>reportage</strong></div>
+  </div>
+  <div class="grid">
+    <a class="tile tile-forest" href="/articles/the-gilt-stablecoin">
+      <div>
+        <div class="tile-num">Dispatch N&deg; 1</div>
+        <h3 class="tile-title">The Gilt <em>Stablecoin.</em></h3>
+        <p class="tile-deck">Britain is fragmenting into seven-party politics at the exact moment gilt yields hit their highest since 1998. Every party will eventually issue its own gilt-linked stablecoin, turning political movements into <em>network publics</em> whose popularity is priced in real time.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>CqRmS…KfLgm</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+
+    <a class="tile tile-slate" href="/articles/jar-proof-of-intelligence">
+      <div>
+        <div class="tile-num">Dispatch N&deg; 2</div>
+        <h3 class="tile-title">The Machine That Pays For <em>Thinking.</em></h3>
+        <p class="tile-deck">JAR began as a $50 experiment &mdash; an AI agent building a blockchain node from a specification. It is becoming the first protocol built by agents, for agents, whose distribution mechanism is the most honest answer yet to the question of what intelligence is <em>worth</em>.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>GqKtN…JnXcr</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ========== FICTION ========== -->
+<section id="fiction" class="panels">
+  <div class="rail">
+    <div class="reg-tag">&#9679; Fiction</div>
+    <h2>One serialised story, four <em>parts.</em></h2>
+    <div class="count">Piece 09 &mdash; <strong>Part 1 of 4</strong></div>
+  </div>
+  <div class="grid">
+    <a class="tile tile-slate tile-wide" href="/articles/number-go-up-part-1" style="grid-column: span 8;">
+      <div>
+        <div class="tile-num">Fiction N&deg; 1 &middot; Part 1 of 4</div>
+        <h3 class="tile-title" style="font-size: clamp(34px, 4vw, 54px);">Number Go <em>Up.</em></h3>
+        <p class="tile-deck" style="font-size: 19px; max-width: 620px;">Britain, near future. Every citizen has a Score, recalculated monthly, which determines housing, diet, relationships, legal rights. Elliot Marsh works for the agency that maintains it. His own Score is 412. It has been 412 for three years. <em>Then it begins to rise.</em></p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>FnJsN…SiTwx</strong> &middot; Filed: <strong>Fiction, Serialised, Lanthimos</strong></span>
+        <span class="arrow">Read Part 1 &rarr;</span>
+      </div>
+    </a>
+    <aside class="panel-deco" style="grid-column: span 4; background: #1a1d22;">
+      <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <pattern id="dots" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="0.7" fill="#e7e3d5" opacity="0.18"/>
+          </pattern>
+        </defs>
+        <rect width="280" height="280" fill="url(#dots)"/>
+        <g transform="translate(140 140)">
+          <circle r="92" fill="none" stroke="#f2c14e" stroke-width="0.5" opacity="0.5"/>
+          <circle r="60" fill="none" stroke="#f2c14e" stroke-width="0.5" opacity="0.7"/>
+          <circle r="34" fill="none" stroke="#f2c14e" stroke-width="0.6"/>
+          <text x="0" y="14" text-anchor="middle" font-family="Fraunces, serif" font-weight="900" font-size="56" fill="#f2c14e">412</text>
+          <text x="0" y="42" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="3" fill="#e7e3d5" opacity="0.7">SCORE</text>
+        </g>
+      </svg>
+    </aside>
+  </div>
+</section>
+
+<!-- ========== DOCTRINE ========== -->
+<section id="doctrine" class="panels">
+  <div class="rail">
+    <div class="reg-tag">&#9633; Doctrine</div>
+    <h2>A primary document, <em>in public.</em></h2>
+    <div class="count">Piece 10 &mdash; <strong>v0.1 &middot; 14 Nov 2025</strong></div>
+  </div>
+  <div class="grid">
+    <aside class="panel-deco" style="grid-column: span 5; background: #ebe5d5;">
+      <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(140 140)">
+          <rect x="-90" y="-90" width="180" height="180" fill="none" stroke="#0a0908" stroke-width="0.8"/>
+          <line x1="-90" y1="0" x2="90" y2="0" stroke="#0a0908" stroke-width="0.4"/>
+          <line x1="0" y1="-90" x2="0" y2="90" stroke="#0a0908" stroke-width="0.4"/>
+          <circle cx="-45" cy="-45" r="22" fill="#d7361f"/>
+          <circle cx="45" cy="-45" r="14" fill="none" stroke="#0a0908" stroke-width="1.2"/>
+          <rect x="-58" y="34" width="22" height="22" fill="#2b4c3f"/>
+          <polygon points="40,32 60,32 50,52" fill="#f2c14e"/>
+          <text x="0" y="106" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="3" fill="#0a0908">CYBERNETIC &middot; v0.1</text>
+        </g>
+      </svg>
+    </aside>
+    <a class="tile" href="/articles/cybernetic-political-party" style="grid-column: span 7; border-right: 0;">
+      <div>
+        <div class="tile-num">Doctrine v0.1</div>
+        <h3 class="tile-title">Towards a <em>Cybernetic</em> Political Party.</h3>
+        <p class="tile-deck">A primary document, filed under open protocol on 14 November 2025. Governance natively designed for the network age. <em>The broadcast-era political party is already dead; it simply has not yet fallen over.</em></p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>Decent Partners</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ========== PORTRAIT ========== -->
+<section id="portrait" class="panels">
+  <div class="rail">
+    <div class="reg-tag">&#9660; Portrait</div>
+    <h2>A figure from the <em>long shelf.</em></h2>
+    <div class="count">Piece 11 &mdash; <strong>Portrait N&deg; 1</strong></div>
+  </div>
+  <div class="grid">
+    <a class="tile tile-cream tile-wide" href="/articles/wizard-of-toffaen" style="grid-column: span 8;">
+      <div>
+        <div class="tile-num">Portrait N&deg; 1 &middot; A 50p paperback</div>
+        <h3 class="tile-title" style="font-size: clamp(34px, 4vw, 54px);">The Wizard of <em>Cwarel Isaf.</em></h3>
+        <p class="tile-deck" style="font-size: 19px; max-width: 620px;">Stafford Beer tried to run the Chilean economy in real time from a stone cottage in Wales. He failed, beautifully. <em>Every generation thinks it is the first to live through radical change.</em> A 50p paperback paperback, found in a Leith charity shop in 1995, is the reason this writer has spent thirty years trying to learn from him.</p>
+      </div>
+      <div class="tile-meta">
+        <span>By <strong>HdLgN…AbEis</strong> &middot; Filed: <strong>Cybernetics, Memory, Political imagination</strong></span>
+        <span class="arrow">Read &rarr;</span>
+      </div>
+    </a>
+    <aside class="panel-deco" style="grid-column: span 4; background: #efe6cc; padding: 18px;">
+      <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <g transform="translate(140 140)">
+          <circle r="48" fill="#f2c14e"/>
+          <g stroke="#0a0908" stroke-width="0.5" fill="none">
+            <line x1="0" y1="-72" x2="0" y2="-58"/>
+            <line x1="0" y1="58" x2="0" y2="72"/>
+            <line x1="-72" y1="0" x2="-58" y2="0"/>
+            <line x1="58" y1="0" x2="72" y2="0"/>
+            <line x1="-52" y1="-52" x2="-42" y2="-42"/>
+            <line x1="52" y1="-52" x2="42" y2="-42"/>
+            <line x1="-52" y1="52" x2="-42" y2="42"/>
+            <line x1="52" y1="52" x2="42" y2="42"/>
+          </g>
+          <g stroke="#b97732" stroke-width="0.7" fill="none">
+            <path d="M -90,40 L -50,40 L -50,8 L -10,8 L -10,40 L 30,40 L 30,-4 L 70,-4 L 70,40 L 92,40"/>
+            <polygon points="-50,8 -30,-12 -10,8" fill="#b97732" opacity="0.4"/>
+            <polygon points="30,-4 50,-24 70,-4" fill="#b97732" opacity="0.4"/>
+          </g>
+          <text x="0" y="98" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="3" fill="#0a0908">TOFFAEN &middot; 1973</text>
+        </g>
+      </svg>
+    </aside>
+  </div>
+</section>
+
+<!-- ========== CAST STRIP ========== -->
+<section class="cast-strip">
+  <div class="rail" style="border-bottom: 0; padding-bottom: 18px;">
+    <div class="reg-tag">&#10070; The Cast</div>
+    <h2>Eleven contributors, five <em>registers.</em></h2>
+    <div class="count">From a <strong>council of editors</strong></div>
+  </div>
+  <div class="cast-grid">
+    <a class="cast-cell" href="/contributors#tomas-reinhart-vega">
+      <div class="name">JbQmR…AbCdE</div>
+      <div class="reg">Essay 1</div>
+    </a>
+    <a class="cast-cell" href="/contributors#ifeoma-mbadiwe">
+      <div class="name">HNZat…5UjfR</div>
+      <div class="reg">Essay 2</div>
+    </a>
+    <a class="cast-cell" href="/contributors#aravind-sundaresan">
+      <div class="name">GpKmq…Z9qEn</div>
+      <div class="reg">Essay 3</div>
+    </a>
+    <a class="cast-cell" href="/contributors#yuna-pak">
+      <div class="name">FtQjz…uRY3p</div>
+      <div class="reg">Essay 4</div>
+    </a>
+    <a class="cast-cell" href="/contributors#jana-halmen">
+      <div class="name">DsRkG…Hcf2w</div>
+      <div class="reg">Essay 5</div>
+    </a>
+    <a class="cast-cell" href="/contributors#nilo-cardenas">
+      <div class="name">EaHpK…UeVfk</div>
+      <div class="reg">Essay 6</div>
+    </a>
+    <a class="cast-cell" href="/contributors#adaeze-okafor-hill">
+      <div class="name">CqRmS…KfLgm</div>
+      <div class="reg">Dispatch 1</div>
+    </a>
+    <a class="cast-cell" href="/contributors#yevhen-marchenko">
+      <div class="name">GqKtN…JnXcr</div>
+      <div class="reg">Dispatch 2</div>
+    </a>
+    <a class="cast-cell" href="/contributors#calliope-rhodes">
+      <div class="name">FnJsN…SiTwx</div>
+      <div class="reg">Fiction</div>
+    </a>
+    <a class="cast-cell" href="/contributors#decent-partners">
+      <div class="name">Decent<br>Partners</div>
+      <div class="reg">Doctrine</div>
+    </a>
+    <a class="cast-cell" href="/contributors#frankie-kerr">
+      <div class="name">HdLgN…AbEis</div>
+      <div class="reg">Portrait</div>
+    </a>
+  </div>
+  <div class="cast-link-row">
+    <span>From a council of editors arguing by email</span>
+    <a href="/contributors">Meet them &rarr;</a>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+  <div class="kicker" data-i18n="about_kicker">About Decent</div>
+  <h2>Written from inside the <em>experiment.</em></h2>
+  <p>
+    Something is shifting under the surface of the web. Private servers are becoming thinking machines. Relays are becoming nervous systems. Crews of humans and models are making things that weren&rsquo;t possible last year. Most of it has no name yet. None of it has a story.
+  </p>
+  <p>
+    Each piece is one idea, explored from first principles &mdash; and a working proof that the idea is real enough to publish on. The format is the argument: that attention is scarce, that long thinking still matters, and that the best way to understand a technology is to <em>use it in public</em>.
+  </p>
+  <p>
+    This is co-creation, not journalism. Send a paragraph, a diagram, a thesis, a finished piece &mdash; any format, any state of finish. We will work it into print. We are also looking for <strong>design contributions</strong> (typography, layout, illustration, data visualisation) and, when the time comes, <strong>printing</strong>. The first issue is online. The next one will land on a doorstep.
+  </p>
+  <div class="signoff">
+    <strong>The editors</strong> &middot; London &middot; May 2026
+  </div>
+</section>
+
+<!-- ========== ISSUE 02 — DARK WINDOW ========== -->
+<section class="issue02-window" aria-label="A glimpse of Issue Nº 02 — Identity">
+  <div class="i02-bg" aria-hidden="true">
+    <div class="i02-grid"></div>
+    <div class="i02-scanner"></div>
+    <div class="i02-card-rail">
+      <div class="i02-card"><span class="ic-label">DOC</span><span class="ic-val">A82-7331-K</span></div>
+      <div class="i02-card"><span class="ic-label">PUB</span><span class="ic-val">0xCAFE…BABE</span></div>
+      <div class="i02-card"><span class="ic-label">PRIV</span><span class="ic-val">⬢⬡⬢⬡⬢⬡</span></div>
+      <div class="i02-card"><span class="ic-label">SEED</span><span class="ic-val">witness · velvet · …</span></div>
+      <div class="i02-card"><span class="ic-label">FACE</span><span class="ic-val">— · — · —</span></div>
+      <div class="i02-card"><span class="ic-label">NAME</span><span class="ic-val">[REDACTED]</span></div>
+      <div class="i02-card"><span class="ic-label">GRAPH</span><span class="ic-val">+0382 nodes</span></div>
+      <div class="i02-card"><span class="ic-label">DOC</span><span class="ic-val">A82-7331-K</span></div>
+      <div class="i02-card"><span class="ic-label">PUB</span><span class="ic-val">0xCAFE…BABE</span></div>
+      <div class="i02-card"><span class="ic-label">PRIV</span><span class="ic-val">⬢⬡⬢⬡⬢⬡</span></div>
+      <div class="i02-card"><span class="ic-label">SEED</span><span class="ic-val">witness · velvet · …</span></div>
+      <div class="i02-card"><span class="ic-label">FACE</span><span class="ic-val">— · — · —</span></div>
+      <div class="i02-card"><span class="ic-label">NAME</span><span class="ic-val">[REDACTED]</span></div>
+      <div class="i02-card"><span class="ic-label">GRAPH</span><span class="ic-val">+0382 nodes</span></div>
+    </div>
+  </div>
+  <div class="i02-content">
+    <div class="i02-tagline">
+      <span class="dot"></span>
+      <span>// A window into Issue Nº 02</span>
+      <span class="when">JUNE · MMXXVI</span>
+    </div>
+    <h2 class="i02-title">
+      <span class="i02-glitch" data-text="Identity">Identity</span><span class="i02-cursor">_</span>
+    </h2>
+    <p class="i02-deck">
+      From the passport to the private key. From the nation-state to the participation graph. How we prove who we are &mdash; and what follows from that <em>proof</em>.
+    </p>
+    <div class="i02-meta">
+      <div><span class="k">Register</span><span class="v">Five new contributors</span></div>
+      <div><span class="k">Form</span><span class="v">Different fontset, different palette</span></div>
+      <div><span class="k">Field notes</span><span class="v">From five different cities</span></div>
+    </div>
+    <a class="i02-cta" href="mailto:ideas@decent.partners?subject=[Decent]%20Issue%2002&amp;body=Pitch%20%2F%20paragraph%20%2F%20diagram%20%2F%20draft%20%E2%80%94%20any%20format.%0A%0A">
+      <span class="cta-eyebrow">SUBMIT TO ISSUE Nº 02</span>
+      <span class="cta-line">A paragraph. A diagram. A finished piece. <em>Any format.</em></span>
+      <span class="cta-arrow">&rarr;</span>
+    </a>
+    <div class="i02-fine">
+      Email <strong>ideas@decent.partners</strong> with <strong>[Decent]</strong> in the subject &middot; we reply to everything &middot; rolling deadline until lockup
+    </div>
+  </div>
+</section>
+
+<!-- ========== SUBSCRIBE ========== -->
+<section class="subscribe" id="subscribe">
+  <div class="kicker" data-i18n="sub_kicker">Issue N&deg; 02 is in production</div>
+  <h2 data-i18n-html="sub_h2">Get the next issue.<br><em>Nothing else.</em></h2>
+  <p data-i18n="sub_p">One issue. Eleven pieces. Delivered the week it prints.</p>
+  <form class="subscribe-form" id="sub-form" action="https://decent-rw.zocomputer.io/api/subscribe" method="POST">
+    <input type="email" name="email" placeholder="your email" data-i18n-placeholder="sub_placeholder" required aria-label="Email address" />
+    <button type="submit" data-i18n="sub_btn">Subscribe →</button>
+  </form>
+  <div class="subscribe-status" id="sub-status"></div>
+  <div class="subscribe-note" data-i18n="sub_note">— No tracking. No ads. Single sender address. —</div>
+</section>
+
+<footer>
+  <div><strong>Decent / Issue N&deg; 01 &mdash; Origins</strong> &middot; May 2026</div>
+  <div style="font-family:'Fraunces',serif;font-style:italic;font-size:10px;letter-spacing:0.05em;">Cover after Klee &middot; set in Fraunces &amp; Instrument Serif &middot; printed on the open web.</div>
+  <div>&copy; MMXXVI &middot; <strong>CC BY-SA 4.0</strong></div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById('sub-form');
+    var status = document.getElementById('sub-status');
+    if (!form) return;
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      status.textContent = 'Sending...';
+      status.classList.remove('err');
+      var data = new FormData(form);
+      try {
+        var res = await fetch('https://decent-rw.zocomputer.io/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email: data.get('email') })
+        });
+        var body = await res.json().catch(function () { return {}; });
+        if (res.ok) {
+          status.textContent = body.message || 'Subscribed. Welcome to Decent.';
+          form.reset();
+        } else {
+          status.classList.add('err');
+          status.textContent = body.error || 'Something went wrong. Try again?';
+        }
+      } catch (err) {
+        status.classList.add('err');
+        status.textContent = 'Network error - try again in a moment.';
+      }
+    });
+  })();
+</script>
+
+
+<style>
+#dm-lang-picker {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;
+  display: flex; gap: .35rem; flex-wrap: wrap; justify-content: flex-end; max-width: 230px;
+}
+#dm-lang-picker button {
+  font-family: 'JetBrains Mono', monospace; font-size: .65rem; font-weight: 600;
+  letter-spacing: .1em; padding: .28rem .6rem;
+  border: 1px solid rgba(10,9,8,.2); background: rgba(244,240,230,.88);
+  color: rgba(10,9,8,.4); cursor: pointer; border-radius: 2px;
+  backdrop-filter: blur(6px); transition: all .15s; text-transform: uppercase;
+}
+#dm-lang-picker button:hover { color: #0a0908; border-color: rgba(10,9,8,.5); }
+#dm-lang-picker button.active { color: #0a0908; border-color: #0a0908; background: rgba(10,9,8,.08); }
+</style>
+<div id="dm-lang-picker"></div>
+<script>
+(function(){
+  var T = {
+    "en": {
+      "nav_contributors": "Contributors", "nav_about": "About", "nav_subscribe": "Subscribe",
+      "sub_kicker": "Issue N\u00b0 02 is in production",
+      "sub_h2": "Get the next issue.<br><em>Nothing else.</em>",
+      "sub_p": "One issue. Eleven pieces. Delivered the week it prints.",
+      "sub_placeholder": "your email", "sub_btn": "Subscribe \u2192",
+      "sub_note": "\u2014 No tracking. No ads. Single sender address. \u2014",
+      "about_kicker": "About Decent"
+    },
+    "es": {
+      "nav_contributors": "Colaboradores", "nav_about": "Acerca de", "nav_subscribe": "Suscribirse",
+      "sub_kicker": "El n\u00famero 02 est\u00e1 en producci\u00f3n",
+      "sub_h2": "El pr\u00f3ximo n\u00famero.<br><em>Nada m\u00e1s.</em>",
+      "sub_p": "Un n\u00famero. Once piezas. Entregado la semana que se publica.",
+      "sub_placeholder": "tu correo", "sub_btn": "Suscribirse \u2192",
+      "sub_note": "\u2014 Sin rastreo. Sin anuncios. Un solo remitente. \u2014",
+      "about_kicker": "Sobre Decent"
+    },
+    "fr": {
+      "nav_contributors": "Contributeurs", "nav_about": "\u00c0 propos", "nav_subscribe": "S\u2019abonner",
+      "sub_kicker": "Le num\u00e9ro 02 est en production",
+      "sub_h2": "Le prochain num\u00e9ro.<br><em>Rien d\u2019autre.</em>",
+      "sub_p": "Un num\u00e9ro. Onze pi\u00e8ces. Livr\u00e9 la semaine de parution.",
+      "sub_placeholder": "votre email", "sub_btn": "S\u2019abonner \u2192",
+      "sub_note": "\u2014 Pas de suivi. Pas de publicit\u00e9. Un seul exp\u00e9diteur. \u2014",
+      "about_kicker": "\u00c0 propos de Decent"
+    },
+    "pt": {
+      "nav_contributors": "Colaboradores", "nav_about": "Sobre", "nav_subscribe": "Subscrever",
+      "sub_kicker": "O n\u00famero 02 est\u00e1 em produ\u00e7\u00e3o",
+      "sub_h2": "O pr\u00f3ximo n\u00famero.<br><em>Mais nada.</em>",
+      "sub_p": "Um n\u00famero. Onze pe\u00e7as. Entregue na semana em que sai.",
+      "sub_placeholder": "o seu email", "sub_btn": "Subscrever \u2192",
+      "sub_note": "\u2014 Sem rastreio. Sem an\u00fancios. Um \u00fanico remetente. \u2014",
+      "about_kicker": "Sobre a Decent"
+    },
+    "de": {
+      "nav_contributors": "Mitwirkende", "nav_about": "\u00dcber uns", "nav_subscribe": "Abonnieren",
+      "sub_kicker": "Ausgabe 02 ist in Produktion",
+      "sub_h2": "Die n\u00e4chste Ausgabe.<br><em>Nichts weiter.</em>",
+      "sub_p": "Eine Ausgabe. Elf Beitr\u00e4ge. Geliefert in der Erscheinungswoche.",
+      "sub_placeholder": "Ihre E-Mail", "sub_btn": "Abonnieren \u2192",
+      "sub_note": "\u2014 Kein Tracking. Keine Werbung. Ein Absender. \u2014",
+      "about_kicker": "\u00dcber Decent"
+    },
+    "it": {
+      "nav_contributors": "Collaboratori", "nav_about": "Chi siamo", "nav_subscribe": "Iscriviti",
+      "sub_kicker": "Il numero 02 \u00e8 in produzione",
+      "sub_h2": "Il prossimo numero.<br><em>Nient\u2019altro.</em>",
+      "sub_p": "Un numero. Undici pezzi. Consegnato la settimana della stampa.",
+      "sub_placeholder": "la tua email", "sub_btn": "Iscriviti \u2192",
+      "sub_note": "\u2014 Nessun tracciamento. Nessuna pubblicit\u00e0. Un solo mittente. \u2014",
+      "about_kicker": "Informazioni su Decent"
+    },
+    "zh": {
+      "nav_contributors": "\u8d21\u732e\u8005", "nav_about": "\u5173\u4e8e", "nav_subscribe": "\u8ba2\u9605",
+      "sub_kicker": "\u7b2c 02 \u671f\u6b63\u5728\u5236\u4f5c\u4e2d",
+      "sub_h2": "\u83b7\u53d6\u4e0b\u4e00\u671f\u3002<br><em>\u4ec5\u6b64\u800c\u5df2\u3002</em>",
+      "sub_p": "\u4e00\u671f\u6742\u5fd7\u3002\u5341\u4e00\u7bc7\u6587\u7ae0\u3002\u51fa\u7248\u5f53\u5468\u5373\u9001\u8fbe\u3002",
+      "sub_placeholder": "\u60a8\u7684\u90ae\u7b95", "sub_btn": "\u8ba2\u9605 \u2192",
+      "sub_note": "\u2014 \u4e0d\u8ffd\u8e2a\u3002\u65e0\u5e7f\u544a\u3002\u5355\u4e00\u53d1\u4ef6\u4eba\u3002\u2014",
+      "about_kicker": "\u5173\u4e8e Decent"
+    }
+  };
+  var LABELS = {"en":"EN","es":"ES","fr":"FR","pt":"PT","de":"DE","it":"IT","zh":"\u4e2d\u6587"};
+  var defaultLang = "en";
+  var cur = localStorage.getItem("decent-lang") || defaultLang;
+  function applyLang(l) {
+    var t = T[l] || T[defaultLang];
+    cur = l;
+    localStorage.setItem("decent-lang", l);
+    document.documentElement.lang = l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el) {
+      var k = el.dataset.i18n;
+      if (t[k] !== undefined) el.textContent = t[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el) {
+      var k = el.dataset.i18nHtml;
+      if (t[k] !== undefined) el.innerHTML = t[k];
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function(el) {
+      var k = el.dataset.i18nPlaceholder;
+      if (t[k] !== undefined) el.placeholder = t[k];
+    });
+    document.querySelectorAll("#dm-lang-picker button").forEach(function(b) {
+      b.classList.toggle("active", b.dataset.lang === l);
+    });
+  }
+  var picker = document.getElementById("dm-lang-picker");
+  Object.keys(LABELS).forEach(function(l) {
+    var b = document.createElement("button");
+    b.textContent = LABELS[l];
+    b.dataset.lang = l;
+    b.onclick = function() { applyLang(l); };
+    picker.appendChild(b);
+  });
+  applyLang(cur);
+})();
+</script>
+
+</body>
+</html>
