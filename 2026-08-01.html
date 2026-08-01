@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en" id="root-html"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Decent — Issue 3: Provenance</title>
+<meta name="description" content="Decent Magazine Issue 3: Provenance">
+<meta property="og:title" content="Decent — Issue 3: Provenance">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory;-webkit-font-smoothing:antialiased;}
+body{font-family:Inter,system-ui,sans-serif;overflow-x:hidden;background:#0a0a0a;}
+.spread{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:8vh 8vw;position:relative;overflow:hidden;}
+.d{font-family:Fraunces,serif;}
+a{color:inherit;}
+p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
+@keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+@media(max-width:768px){
+  .spread{padding:6vh 6vw;}
+  .spg{grid-template-columns:1fr!important;}
+  .spg>div{padding:8vh 6vw!important;}
+}
+@media print{html{scroll-snap-type:none;}.spread{page-break-after:always;min-height:auto;padding:2cm;}}
+#lang-picker{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end;max-width:220px;}
+#lang-picker button{font-family:Inter,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;padding:.3rem .65rem;border:1px solid rgba(255,255,255,.25);background:rgba(10,10,10,.75);color:rgba(255,255,255,.55);cursor:pointer;border-radius:2px;backdrop-filter:blur(6px);transition:all .15s;text-transform:uppercase;}
+#lang-picker button:hover{color:#fff;border-color:rgba(255,255,255,.6);}
+#lang-picker button.active{color:#fff;border-color:#fff;background:rgba(255,255,255,.12);}
+</style></head><body>
+<section class="spread" style="background:#0a0a0a;color:#fff;" lang="en">
+        <div style="position:absolute;top:8vh;left:8vw;font-size:1.2rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:0.4;"><span data-i18n="issue">Issue</span> 3</div>
+        <div style="position:absolute;top:8vh;right:8vw;font-size:1.2rem;font-weight:500;opacity:0.4;"><span data-i18n-date="2026-08-01">August 2026</span></div>
+        <div style="margin-bottom:6vh;">
+            <h1 class="d" style="font-size:clamp(5rem,14vw,12rem);line-height:.9;font-weight:900;letter-spacing:-.03em;">DECENT</h1>
+            <div style="width:120px;height:4px;background:#ff3333;margin:3rem 0;"></div>
+            <h2 class="d" style="font-size:clamp(2rem,5vw,4rem);font-weight:300;font-style:italic;opacity:0.8;">Provenance</h2>
+            <p style="font-size:1.4rem;line-height:1.6;opacity:0.7;max-width:40ch;margin-top:3rem;">Every story in this issue is really the same story: something needs to prove where it came from. A photograph needs to prove a camera took it and a model didn&#x27;t. A company needs to prove the human behind it is real before a bank will move its money. An AI agent needs to prove it&#x27;s authorised to spend before a merchant will serve it. A book needs to prove who actually wrote it. A stablecoin needs to prove what backs it. Provenance used to be a background assumption — you took origin on faith, or you didn&#x27;t ask. In 2026 it has become infrastructure: standards, wallets, protocols, manifests, and graphs, built because the old assumption stopped holding. Ten pieces on where things come from, and who gets to say so.</p>
+        </div>
+        <div style="margin-top:auto;padding-top:4vh;border-top:1px solid rgba(255,255,255,.1);">
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:0.35;margin-bottom:2rem;"><span data-i18n="contents">Contents</span></div>
+            <div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">01</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Manifest Becomes the Default</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">02</span>
+            <span style="font-size:1.4rem;font-weight:500;">Papers, Please: The EU&#x27;s Wallet Comes Due</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">03</span>
+            <span style="font-size:1.4rem;font-weight:500;">Machines That Can Prove They Paid</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">04</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Float Nobody Owns</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">05</span>
+            <span style="font-size:1.4rem;font-weight:500;">Provenance by Default</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">06</span>
+            <span style="font-size:1.4rem;font-weight:500;">Bluesky&#x27;s Decentralised Bet Turns Real</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">07</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Invisible Tax on Being Real</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">08</span>
+            <span style="font-size:1.4rem;font-weight:500;">Who Wrote This, Really</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">09</span>
+            <span style="font-size:1.4rem;font-weight:500;">Currency That Knows Its Members</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">10</span>
+            <span style="font-size:1.4rem;font-weight:500;">Provenance Is the Business Model</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div>
+        </div>
+    </section><section class="spread" style="background:#0a0a0a;color:#fff;">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,50vw,40rem);font-weight:900;opacity:.04;line-height:1;pointer-events:none;">01</div>
+        <div style="position:relative;z-index:1;max-width:52ch;">
+            <div style="font-size:1.1rem;font-weight:700;color:#ff3333;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="story">Story</span> 01</div>
+            <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);line-height:1;font-weight:900;margin-bottom:2rem;">The Manifest Becomes the Default</h2>
+            <div style="width:80px;height:3px;background:#ff3333;margin-bottom:2rem;"></div>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.85;max-width:45ch;"><p>The Coalition for Content Provenance and Authenticity turned five in February, and marked it by shipping <a href="https://c2pa.ai/news/five-years" target="_blank" rel="noopener" style="text-underline-offset:4px">Content Credentials 2.3</a>, which adds live video provenance — the ability to sign a video feed as it&#x27;s captured or broadcast, not just after the fact. C2PA started in 2021 with six members: Adobe, Arm, BBC, Intel, Microsoft, Truepic. It now has over 6,000 members and affiliates, and the standard has quietly become the plumbing under most of the internet&#x27;s answer to synthetic media — OpenAI, Google, Adobe, and Stability AI all sign their generated images and video by default; Nikon, Sony, Canon, and Leica sign at the point of capture; Samsung and Qualcomm are building it into phone camera pipelines.</p><p>What changed the incentive wasn&#x27;t taste, it was law. The EU AI Act&#x27;s Article 50 transparency rules require machine-readable disclosure on AI-generated content, with enforcement beginning in August 2026 — this month. California&#x27;s SB 942 already took effect in January. A manifest that used to be a nice-to-have for photojournalists is now the compliance mechanism regulators point to by name. The gap that&#x27;s left is not technical but structural: a signed manifest tells you the declared history of a file, not whether that history is true, and it can still be stripped by any platform that doesn&#x27;t bother to preserve it on re-encode. Provenance infrastructure doesn&#x27;t end misinformation. It just makes &#x27;we didn&#x27;t check&#x27; a harder thing to say out loud.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#ff3333;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://c2pa.ai/news/five-years" target="_blank" rel="noopener" style="font-size:1.15rem;color:#ff3333;text-decoration:underline;text-underline-offset:4px;">c2pa.ai/news/five-years</a></div>
+        </div>
+    </section><section class="spread" style="background:#0d1b2a;color:#e0d8c8;">
+        <div style="position:absolute;top:6vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(6rem,15vw,10rem);font-weight:100;color:#c9a84c;opacity:.25;line-height:1;">02</div>
+        <div style="max-width:55ch;position:relative;z-index:1;">
+            <div style="font-size:1rem;font-weight:600;color:#c9a84c;letter-spacing:.3em;text-transform:uppercase;margin-bottom:3rem;"><span data-i18n="chapter">Chapter</span> 2</div>
+            <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);line-height:1.05;font-weight:800;font-style:italic;margin-bottom:2.5rem;">Papers, Please: The EU&#x27;s Wallet Comes Due</h2>
+            
+            <div style="font-size:1.3rem;line-height:1.9;opacity:.85;"><p>By 24 December 2026, every one of the EU&#x27;s 27 member states is legally required to offer citizens a working <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487738/EU+Digital+Identity+Wallet+Home" target="_blank" rel="noopener" style="text-underline-offset:4px">European Digital Identity Wallet</a> — a phone-based app for holding ID documents, diplomas, and driving licences, and for proving who you are to a bank, a university, or a government service without handing over a physical document. Two years of large-scale pilots under the POTENTIAL programme ran more than 1,300 tests and over 1,000 successful transactions across e-government, bank account opening, SIM registration, mobile driving licences, and e-prescriptions, including 249 cross-border. The legal framework, eIDAS 2.0, has been in force since May 2024; what&#x27;s landing now is the deadline.</p><p>The catch is unevenness. Each member state builds and certifies its own wallet to a shared specification, which means citizen experience will diverge by country for years even as the underlying protocol stays common. Public-sector acceptance is mandatory from December 2026; private-sector acceptance for regulated industries — banking, e-money, telecoms — doesn&#x27;t become mandatory until December 2027. For a year, the wallet will exist, work, and mostly not be asked for. That gap is exactly where every identity-adjacent product Decent builds — passkey onboarding, Kreivo membership, dUSD settlement — has to decide whether to design for the wallet that&#x27;s coming or the KYC flow that&#x27;s still here.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#c9a84c;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487738/EU+Digital+Identity+Wallet+Home" target="_blank" rel="noopener" style="font-size:1.15rem;color:#c9a84c;text-decoration:underline;text-underline-offset:4px;">ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALI</a></div>
+        </div>
+    </section><section class="spread" style="background:#e8c4b8;color:#2d0a0a;text-align:center;">
+        <div style="position:absolute;top:50%;right:10vw;transform:translateY(-50%) rotate(-12deg);border:6px solid #cc2222;padding:1.5rem 3rem;font-family:Fraunces,serif;font-size:clamp(5rem,12vw,9rem);font-weight:900;color:#cc2222;opacity:.18;line-height:1;">03</div>
+        <div style="position:relative;z-index:1;max-width:50ch;margin:0 auto;">
+            <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;font-weight:900;margin-bottom:2rem;">Machines That Can Prove They Paid</h2>
+            <div style="width:60px;height:4px;background:#cc2222;margin:0 auto 2rem;"></div>
+            <div style="font-size:1.4rem;line-height:1.8;"><p>HTTP 402 — &quot;Payment Required&quot; — sat unused in the web&#x27;s status code list for three decades. Coinbase and Cloudflare&#x27;s <a href="https://sherlock.xyz/post/x402-explained-the-http-402-payment-protocol" target="_blank" rel="noopener" style="text-underline-offset:4px">x402 protocol</a>, launched May 2025, finally gave it a job: an API returns 402, an AI agent reads the payment terms from the header, signs a stablecoin transfer, and retries the request with proof of payment attached. No account, no card network, no human in the loop. As of March 2026 it had processed over 119 million transactions on Base and 35 million on Solana, running at roughly $600 million annualised. In March, Stripe and the payments chain Tempo launched a rival, the Machine Payments Protocol, which does the same job across stablecoins, cards, and even Bitcoin Lightning — payment-method-agnostic where x402 is stablecoin-only.</p><p>The part that matters more than either protocol winning is what both are quietly conceding: an agent spending money needs to prove <em>what it&#x27;s authorised to spend and on whose behalf</em>, or the whole model is a fraud surface. World&#x27;s AgentKit bolts World ID onto x402 payments specifically so a merchant can know a human sanctioned the transaction. Concordium is doing the same for age-gated purchases. This is the same shape of problem Decent has been building against on Kreivo — identity as a precondition for spend, not an afterthought bolted onto a ledger entry. Decent already runs its own x402 facilitator internally; the interesting question for the next twelve months isn&#x27;t whether agents will transact, it&#x27;s whether the identity layer underneath them looks like a KYC form or a membership graph.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#cc2222;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://sherlock.xyz/post/x402-explained-the-http-402-payment-protocol" target="_blank" rel="noopener" style="font-size:1.15rem;color:#cc2222;text-decoration:underline;text-underline-offset:4px;">sherlock.xyz/post/x402-explained-the-http-402-payment-protoc</a></div>
+        </div>
+    </section><section class="spread" style="background:#0c0c0c;color:#33ff33;font-family:'Courier New',monospace;">
+        <div>
+            <div style="font-size:1rem;opacity:.35;margin-bottom:3rem;">
+                <span style="color:#00cc00;">decent@magazine</span>:<span style="color:#6666ff;">~</span>$ cat issue/04.md
+            </div>
+            <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;">
+                <span style="font-size:clamp(4rem,10vw,7rem);font-weight:bold;opacity:.12;font-family:'Courier New',monospace;">&gt;</span>
+                <h2 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:bold;font-family:'Courier New',monospace;text-transform:uppercase;">The Float Nobody Owns</h2>
+            </div>
+            <div style="font-size:1.3rem;line-height:2;max-width:60ch;border-left:3px solid #00cc00;padding-left:2rem;margin-left:1rem;"><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>Decent settles through [Bloque](https://rw.zo.space/dusd-supply), and Bloque settles everything — every origin, every local currency leg, every card swipe — into one shared pool: dUSD, a USD-backed stablecoin on Kusama Asset Hub that Decent itself issues via Brale. That single fact splits Decent&#x27;s economics into two unrelated businesses wearing the same badge. As *issuer*, Decent earns a revenue share on the entire dUSD float across every origin that settles through it — Colombian peso on-ramps, other collectives, anyone — under Brale&#x27;s tiered structure: 10% on the first $5m, rising to 90% above $20m. As *origin*, Decent earns only on its own card volume: 1% interchange plus 1.5% FX on whatever the Decent Card actually moves.</div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span></div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>The two numbers, checked live this past month, tell an honest story about where the company actually sits: platform-wide float was around $267,000, almost entirely generated by other origins&#x27; Colombian peso activity. Decent&#x27;s own card volume, freshly launched, was zero. Decent is currently making its money from being the settlement layer for other people&#x27;s payments, not its own — which is either an odd place to be standing, or exactly the point of building infrastructure before building a product on top of it. The dUSD supply is checkable by anyone in real time; provenance, in this case, means the ledger just tells you.</div></div>
+            <div style="margin-top:3rem;font-size:1.1rem;opacity:.45;"><span style="color:#00cc00;">// author:</span> Decent Editorial</div>
+            <div style="margin-top:1rem;"><a href="https://rw.zo.space/dusd-supply" target="_blank" rel="noopener" style="font-size:1.15rem;color:#33ff33;text-decoration:underline;text-underline-offset:4px;">rw.zo.space/dusd-supply</a></div>
+        </div>
+        <div style="position:absolute;bottom:8vh;left:8vw;width:12px;height:24px;background:#33ff33;animation:blink 1s infinite;"></div>
+    </section><section class="spread" style="background:#f5f0e8;color:#1a1a1a;">
+        <div style="max-width:58ch;">
+            <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1rem;">
+                <span style="font-family:Fraunces,serif;font-size:1.2rem;color:#8b0000;font-weight:600;"><span data-i18n="no">No.</span> 5</span>
+                <span style="flex:1;height:1px;background:#8b0000;opacity:.3;"></span>
+            </div>
+            <h2 class="d" style="font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;font-weight:800;margin-bottom:3rem;">Provenance by Default</h2>
+            <div style="font-size:1.35rem;line-height:1.9;">
+                <span class="d" style="float:left;font-size:clamp(5rem,12vw,8rem);line-height:.78;font-weight:900;color:#8b0000;margin-right:1rem;margin-top:.1em;">M</span>
+                <p>ost networks bolt attribution on after the fact: someone joins, does things, and only later does anybody try to reconstruct who invited whom or who actually did the work. Decent&#x27;s membership layer, <a href="https://rw.zo.space/birdbrain/docs" target="_blank" rel="noopener" style="text-underline-offset:4px">built on the Kreivo parachain</a>, does the opposite. The rule, formalised this year as the <em>naive joining pattern</em>: every passkey interaction — sign up, log in, contribute — mints or re-anchors on-chain membership automatically. There&#x27;s no separate &#x27;now register as a member&#x27; step to skip. Participation <em>is</em> membership, recorded at the moment it happens, not reconstructed from logs afterward.</p><p>The same logic runs through the invite graph: every introduction that brings someone new into the network is a signed edge in a ledger, not a fuzzy social memory. When Kabocha eventually compensates people for the value their networks generate, it has something concrete to point at — not &quot;we think you were influential&quot; but &quot;here is the recorded chain of introductions that led here.&quot; It&#x27;s a small design choice with a large consequence: provenance that&#x27;s assumed by default is verifiable; provenance that&#x27;s added later is just a story someone tells.</p>
+            </div>
+            <div style="clear:both;"></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#8b0000;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://rw.zo.space/birdbrain/docs" target="_blank" rel="noopener" style="font-size:1.15rem;color:#8b0000;text-decoration:underline;text-underline-offset:4px;">rw.zo.space/birdbrain/docs</a></div>
+        </div>
+    </section><section class="spread" style="background:#1a1a2e;color:#fff;text-align:center;align-items:center;">
+        <div style="max-width:60ch;margin:0 auto;">
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#e94560;margin-bottom:2rem;"><span data-i18n="story">Story</span> 06</div>
+            <div class="d" style="font-size:clamp(8rem,25vw,20rem);font-weight:900;line-height:.85;color:#e94560;margin-bottom:2rem;letter-spacing:-.05em;">41.41m users by end of 2025, +60% year over year</div>
+            <h2 class="d" style="font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:2rem;line-height:1.1;">Bluesky&#x27;s Decentralised Bet Turns Real</h2>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.8;max-width:45ch;margin:0 auto;"><p>Bluesky closed 2025 at 41.41 million users, up from 25.94 million at the start of the year — growth of almost 60% for a network built on a protocol, <a href="https://atproto.com" target="_blank" rel="noopener" style="text-underline-offset:4px">AT Protocol</a>, that anyone can run their own server on. That&#x27;s the part sceptics of decentralised social kept saying wouldn&#x27;t scale: an architecture where identity, data, and moderation don&#x27;t all live inside one company&#x27;s walls. It scaled anyway, and it did so while running 24/7 moderation operations the whole year and fielding over 6 million user reports, proving the harder claim — that decentralisation and functioning moderation aren&#x27;t actually in tension, just harder to build.</p><p>The mechanism worth watching is composability, not raw growth. In March, Bluesky shipped Attie, letting anyone build a custom algorithmic feed from a plain-language description instead of code — because AT Protocol treats the feed algorithm itself as a pluggable, swappable layer, not something Bluesky the company owns exclusively. A protocol where the client, the feed algorithm, and the moderation service are all independently replaceable is a protocol where no single actor can quietly change the rules on everyone at once. That&#x27;s the actual pitch decentralised social made a decade ago. It&#x27;s just now the pitch with user numbers behind it.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#e94560;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://atproto.com" target="_blank" rel="noopener" style="font-size:1.15rem;color:#e94560;text-decoration:underline;text-underline-offset:4px;">atproto.com</a></div>
+        </div>
+    </section><section class="spread sp" style="background:#fff;color:#0a0a0a;padding:0;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh;" class="spg">
+            <div style="background:#0055ff;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:8vh 6vw;">
+                <div style="font-family:Fraunces,serif;font-size:clamp(8rem,20vw,14rem);font-weight:900;opacity:.12;line-height:1;margin-bottom:2rem;">07</div>
+                <h2 class="d" style="font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;line-height:1.05;">The Invisible Tax on Being Real</h2>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;padding:8vh 6vw;background:#fafafa;">
+                <div style="font-size:1.35rem;line-height:1.9;max-width:40ch;"><p>Spend on Know Your Business and Know Your Customer compliance tooling will hit $35.5 billion globally in 2026 and is projected to reach $53 billion by 2030, according to <a href="https://fintech.global/2026/06/24/9-kyb-solutions-that-are-helping-firms-streamline-their-compliance" target="_blank" rel="noopener" style="text-underline-offset:4px">Juniper Research</a>. None of that spend produces a product; it produces confidence that a business is who it says it is before a bank, a card network, or a payment processor will move money for it. For a young company — a new entity, a new bank account, a new API key — that confidence has to be built from scratch every single time, with every single provider, regardless of how legitimate the business actually is on paper.</p><p>Industry data on completion rates makes the friction concrete: individual identity verification (KYC) typically completes at 60–80%; business verification (KYB) completes at only 40–60%, because the document requirements are heavier and the ownership structures are more complex to prove. Between 40% and 70% of prospects abandon financial onboarding entirely before finishing it. This is the friction every network business runs into the moment it tries to actually hold and move money rather than just talk about doing so — and it&#x27;s a large part of why identity-native infrastructure, where provenance is established once and reused everywhere, is worth building rather than re-proving who you are to every counterparty from a blank page.</p></div>
+                <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#0055ff;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://fintech.global/2026/06/24/9-kyb-solutions-that-are-helping-firms-streamline-their-compliance" target="_blank" rel="noopener" style="font-size:1.15rem;color:#0055ff;text-decoration:underline;text-underline-offset:4px;">fintech.global/2026/06/24/9-kyb-solutions-that-are-helping-f</a></div>
+            </div>
+        </div>
+    </section><section class="spread" style="background:#0f0f23;color:#fff;">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(12rem,35vw,28rem);font-weight:900;-webkit-text-stroke:2px rgba(0,255,204,.12);color:transparent;line-height:1;pointer-events:none;">08</div>
+        <div style="position:relative;z-index:1;max-width:52ch;">
+            <div style="display:inline-block;padding:.3rem 1.5rem;border:2px solid #00ffcc;font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#00ffcc;margin-bottom:2.5rem;">08</div>
+            <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);font-weight:900;line-height:1;margin-bottom:2rem;">Who Wrote This, Really</h2>
+            <div style="width:100px;height:2px;background:#00ffcc;margin-bottom:2rem;"></div>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.85;"><p>In early 2026, Hachette Book Group cancelled a contracted horror novel, <em>Shy Girl</em> by Mia Ballard, over suspected undisclosed AI use — one of the first times a major publisher has pulled a signed title specifically over authorship provenance rather than quality or sales. It landed in the same season <em>The Bookseller</em> reported editors at the London Book Fair openly discussing using AI to triage manuscript submissions before a human reads them. The ghostwriting industry, meanwhile, is not shrinking under AI pressure — it&#x27;s <a href="https://associationofghostwriters.org/whats-ahead-for-ghostwriting-and-publishing-in-2026" target="_blank" rel="noopener" style="text-underline-offset:4px">repricing around it</a>, with contract language around AI use &quot;sharpening month by month&quot; as clients start demanding explicit disclosure of exactly how much of a manuscript a machine touched.</p><p>Academic publishing is having the same argument in more formal language: authorship guidelines at research institutions now explicitly state that AI tools cannot be listed as authors because they cannot take responsibility for a work&#x27;s content — authorship requires accountability, not just contribution. That&#x27;s a useful distinction for anywhere provenance and credit overlap. A tool can generate a sentence. It cannot stand behind it. Decent&#x27;s own house rule — backend voice-credit for every piece, no pseudonymous cast, an editor who&#x27;s actually accountable for what runs — is the same bet made a year before the publishing industry had to make it under pressure: say who actually stands behind the words, before someone makes you.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#00ffcc;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://janefriedman.com/ai-and-publishing-faq-for-writers" target="_blank" rel="noopener" style="font-size:1.15rem;color:#00ffcc;text-decoration:underline;text-underline-offset:4px;">janefriedman.com/ai-and-publishing-faq-for-writers</a></div>
+        </div>
+    </section><section class="spread" style="background:#c4a882;color:#2c1810;">
+        <div style="position:absolute;bottom:8vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(10rem,25vw,18rem);font-weight:100;opacity:.1;line-height:1;pointer-events:none;">09</div>
+        <div style="max-width:50ch;margin-left:auto;position:relative;z-index:1;">
+            <div style="text-align:right;">
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:2rem;"><span data-i18n="part">Part</span> 9</div>
+                <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);font-weight:800;line-height:1.05;margin-bottom:2rem;">Currency That Knows Its Members</h2>
+                <div style="width:80px;height:3px;background:#5c3d2e;margin-left:auto;margin-bottom:2.5rem;"></div>
+            </div>
+            <div style="font-size:1.35rem;line-height:1.9;"><p><a href="https://encointer.org" target="_blank" rel="noopener" style="text-underline-offset:4px">Encointer</a>, a Kusama parachain founded by Alain Brenzikofer, has spent years solving a problem most digital currency projects skip entirely: how do you know a participant is one real, distinct human, without a passport, a bank, or a central registry? Its answer is proof-of-personhood by ceremony — local groups physically meet in person, key-sign each other, and that meeting becomes the basis for minting a local currency and distributing a universal basic income to verified attendees. It&#x27;s slow, deliberately so, and it&#x27;s one of the few working answers to Sybil resistance that doesn&#x27;t route through a government ID or a biometric database.</p><p>It matters to Decent&#x27;s world specifically because Kusama&#x27;s Proof of Personhood Vision bounty — a standing treasury envelope curators like Brenzikofer can disburse against — treats this as unfinished, fundable infrastructure rather than a solved problem. Every identity system in this issue, from the EU wallet to World&#x27;s AgentKit, is solving some version of &quot;prove you&#x27;re real&quot; by attaching more data to a person. Encointer solves it by requiring people to be in the same room. That trade-off — less scalable, less surveillable, more provably human — is worth keeping in view every time a slicker, more centralised answer to the same question ships.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#5c3d2e;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://encointer.org" target="_blank" rel="noopener" style="font-size:1.15rem;color:#5c3d2e;text-decoration:underline;text-underline-offset:4px;">encointer.org</a></div>
+        </div>
+    </section><section class="spread" style="background:#ee3333;color:#fff;text-align:center;align-items:center;">
+        <div style="max-width:55ch;margin:0 auto;position:relative;">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,40vw,30rem);font-weight:900;color:#000;opacity:.06;line-height:1;pointer-events:none;">10</div>
+            <div style="position:relative;z-index:1;">
+                <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:1;margin-bottom:2rem;">Provenance Is the Business Model</h2>
+                <div style="width:80px;height:4px;background:#fff;margin:0 auto 2.5rem;"></div>
+                <div style="font-size:1.4rem;line-height:1.8;max-width:40ch;margin:0 auto;"><p>Look across this issue and the pattern isn&#x27;t subtle: a coalition signing photographs, a continent issuing identity wallets, protocols teaching machines to prove they&#x27;re authorised to spend, a compliance industry charging $35 billion a year to answer &quot;is this business real,&quot; a publisher cancelling a book over who actually wrote it, a parachain requiring people to stand in the same room to prove they exist. None of these are the same technology. All of them are the same answer to the same pressure: the old default — assume it&#x27;s real unless proven otherwise — stopped holding, and nobody is going back to it voluntarily.</p><p>The businesses being built into that gap right now aren&#x27;t selling content, or payments, or identity as separate products. They&#x27;re selling the receipt underneath all three: a verifiable record of where something came from, who touched it, and who&#x27;s accountable for it standing up. That&#x27;s what a content manifest is. That&#x27;s what an invite graph is. That&#x27;s what a membership chain on Kreivo is, and what dUSD&#x27;s checkable float is, and what an EU wallet&#x27;s credential is. Provenance isn&#x27;t a compliance cost bolted onto a business. Increasingly, it <em>is</em> the business — the thing being sold is trust that can be checked rather than trust that has to be taken on faith. Build the receipt in from the start, and everything downstream — money, attribution, membership — gets easier to earn and harder to fake.</p></div>
+                <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#fff;opacity:0.7;text-align:center;">— Decent Editorial</div>
+            </div>
+        </div>
+    </section><section class="spread" style="background:#0a0a0a;color:#fff;justify-content:flex-end;">
+        <div>
+            <div style="opacity:.3;margin-bottom:4rem;">
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="contributors">Contributors</span></div>
+                <div style="font-size:1.2rem;margin-bottom:.5rem;">Decent Editorial</div>
+            </div>
+            <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:3rem;">
+                <h3 class="d" style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem;">DECENT</h3>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:.5rem;"><span data-i18n="issue">Issue</span> 3 · <span data-i18n-date="2026-08-01">August 2026</span></div>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:2rem;"><span data-i18n="theme">Theme</span>: Provenance</div>
+                <div style="font-size:1.15rem;opacity:.35;max-width:50ch;">
+                    <span data-i18n-html="blurb">Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.</span>
+                    <span data-i18n-html="submit">Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="lang-picker"></div>
+<script>
+(function(){
+  var T={"en": {"issue": "Issue", "contents": "Contents", "story": "Story", "chapter": "Chapter", "no": "No.", "part": "Part", "contributors": "Contributors", "theme": "Theme", "blurb": "Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.", "submit": "Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.", "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "space_reserved_title": "Space Reserved", "space_reserved_author": "The Editors", "space_reserved_content": "This space awaits a future contributor. Email richard@decent.partners with [Decent] in the subject."}, "es": {"issue": "Número", "contents": "Índice", "story": "Historia", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent es una revista mensual reunida a partir de contribuciones de una red distribuida de colaboradores.", "submit": "Envía tu texto para el próximo número: escribe a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> en el asunto.", "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], "space_reserved_title": "Espacio Reservado", "space_reserved_author": "Los Editores", "space_reserved_content": "Este espacio aguarda a un futuro colaborador. Escribe a richard@decent.partners con [Decent] en el asunto."}, "fr": {"issue": "Numéro", "contents": "Sommaire", "story": "Histoire", "chapter": "Chapitre", "no": "N°", "part": "Partie", "contributors": "Contributeurs", "theme": "Thème", "blurb": "Decent est un magazine mensuel composé de contributions d'un réseau distribué de collaborateurs.", "submit": "Soumettez à la prochaine édition : écrivez à <strong>richard@decent.partners</strong> avec <strong>[Decent]</strong> dans l'objet.", "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"], "space_reserved_title": "Espace Réservé", "space_reserved_author": "Les Éditeurs", "space_reserved_content": "Cet espace attend un futur contributeur. Écrivez à richard@decent.partners avec [Decent] dans l'objet."}, "pt": {"issue": "Edição", "contents": "Sumário", "story": "História", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent é uma revista mensal reunida a partir de contribuições de uma rede distribuída de colaboradores.", "submit": "Envie para a próxima edição: escreva para <strong>richard@decent.partners</strong> com <strong>[Decent]</strong> no assunto.", "months": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"], "space_reserved_title": "Espaço Reservado", "space_reserved_author": "Os Editores", "space_reserved_content": "Este espaço aguarda um futuro colaborador. Escreva para richard@decent.partners com [Decent] no assunto."}, "de": {"issue": "Ausgabe", "contents": "Inhalt", "story": "Beitrag", "chapter": "Kapitel", "no": "Nr.", "part": "Teil", "contributors": "Mitwirkende", "theme": "Thema", "blurb": "Decent ist ein monatliches Magazin, das aus Beiträgen eines verteilten Netzwerks von Mitarbeitenden zusammengestellt wird.", "submit": "Einreichung für die nächste Ausgabe: E-Mail an <strong>richard@decent.partners</strong> mit <strong>[Decent]</strong> im Betreff.", "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], "space_reserved_title": "Platz Reserviert", "space_reserved_author": "Die Redaktion", "space_reserved_content": "Dieser Platz wartet auf einen zukünftigen Beitragenden. E-Mail an richard@decent.partners mit [Decent] im Betreff."}, "it": {"issue": "Numero", "contents": "Sommario", "story": "Storia", "chapter": "Capitolo", "no": "N.", "part": "Parte", "contributors": "Collaboratori", "theme": "Tema", "blurb": "Decent è una rivista mensile composta da contributi di una rete distribuita di collaboratori.", "submit": "Invia per il prossimo numero: scrivi a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> nell'oggetto.", "months": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], "space_reserved_title": "Spazio Riservato", "space_reserved_author": "I Redattori", "space_reserved_content": "Questo spazio attende un futuro collaboratore. Scrivi a richard@decent.partners con [Decent] nell'oggetto."}, "zh": {"issue": "期", "contents": "目录", "story": "故事", "chapter": "章节", "no": "第", "part": "部分", "contributors": "贡献者", "theme": "主题", "blurb": "Decent 是一本月刊，汇集来自分布式协作网络的投稿。", "submit": "投稿下一期：发送邮件至 <strong>richard@decent.partners</strong>，主题包含 <strong>[Decent]</strong>。", "months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"], "space_reserved_title": "预留空间", "space_reserved_author": "编辑部", "space_reserved_content": "此处等待未来的投稿人。请发邮件至 richard@decent.partners，主题包含 [Decent]。"}};
+  var LABELS={"en": "EN", "es": "ES", "fr": "FR", "pt": "PT", "de": "DE", "it": "IT", "zh": "中文"};
+  var defaultLang="en";
+  var cur=localStorage.getItem("dm-lang")||defaultLang;
+  function applyLang(l){
+    var t=T[l]||T[defaultLang];
+    cur=l;
+    localStorage.setItem("dm-lang",l);
+    document.getElementById("root-html").lang=l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k=el.dataset.i18n;
+      if(t[k]!==undefined)el.textContent=t[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+      var k=el.dataset.i18nHtml;
+      if(t[k]!==undefined)el.innerHTML=t[k];
+    });
+    document.querySelectorAll("[data-i18n-date]").forEach(function(el){
+      var d=el.dataset.i18nDate;
+      var parts=d.split("-");
+      if(parts.length>=2){
+        var m=parseInt(parts[1],10)-1;
+        var y=parts[0];
+        var months=t.months||T[defaultLang].months;
+        el.textContent=months[m]+" "+y;
+      }
+    });
+    document.querySelectorAll("#lang-picker button").forEach(function(b){
+      b.classList.toggle("active",b.dataset.lang===l);
+    });
+  }
+  var picker=document.getElementById("lang-picker");
+  Object.keys(LABELS).forEach(function(l){
+    var b=document.createElement("button");
+    b.textContent=LABELS[l];
+    b.dataset.lang=l;
+    b.onclick=function(){applyLang(l);};
+    picker.appendChild(b);
+  });
+  applyLang(cur);
+})();
+</script>
+</body></html>
