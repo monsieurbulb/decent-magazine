@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en" id="root-html"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Decent — Issue 4: Settlement</title>
+<meta name="description" content="Decent Magazine Issue 4: Settlement">
+<meta property="og:title" content="Decent — Issue 4: Settlement">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory;-webkit-font-smoothing:antialiased;}
+body{font-family:Inter,system-ui,sans-serif;overflow-x:hidden;background:#0a0a0a;}
+.spread{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:8vh 8vw;position:relative;overflow:hidden;}
+.d{font-family:Fraunces,serif;}
+a{color:inherit;}
+p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
+@keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+@media(max-width:768px){
+  .spread{padding:6vh 6vw;}
+  .spg{grid-template-columns:1fr!important;}
+  .spg>div{padding:8vh 6vw!important;}
+}
+@media print{html{scroll-snap-type:none;}.spread{page-break-after:always;min-height:auto;padding:2cm;}}
+#lang-picker{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end;max-width:220px;}
+#lang-picker button{font-family:Inter,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;padding:.3rem .65rem;border:1px solid rgba(255,255,255,.25);background:rgba(10,10,10,.75);color:rgba(255,255,255,.55);cursor:pointer;border-radius:2px;backdrop-filter:blur(6px);transition:all .15s;text-transform:uppercase;}
+#lang-picker button:hover{color:#fff;border-color:rgba(255,255,255,.6);}
+#lang-picker button.active{color:#fff;border-color:#fff;background:rgba(255,255,255,.12);}
+</style></head><body>
+<section class="spread" style="background:#0a0a0a;color:#fff;" lang="en">
+        <div style="position:absolute;top:8vh;left:8vw;font-size:1.2rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:0.4;"><span data-i18n="issue">Issue</span> 4</div>
+        <div style="position:absolute;top:8vh;right:8vw;font-size:1.2rem;font-weight:500;opacity:0.4;"><span data-i18n-date="2026-09-01">September 2026</span></div>
+        <div style="margin-bottom:6vh;">
+            <h1 class="d" style="font-size:clamp(5rem,14vw,12rem);line-height:.9;font-weight:900;letter-spacing:-.03em;">DECENT</h1>
+            <div style="width:120px;height:4px;background:#ff3333;margin:3rem 0;"></div>
+            <h2 class="d" style="font-size:clamp(2rem,5vw,4rem);font-weight:300;font-style:italic;opacity:0.8;">Settlement</h2>
+            <p style="font-size:1.4rem;line-height:1.6;opacity:0.7;max-width:40ch;margin-top:3rem;">Every story in this issue turns on the same word: settlement. A payment settles between two machines that have never met. A liability question settles onto whichever party&#x27;s lawyers move slowest. A robot settles into a job a person used to do. A licensing dispute settles into a deal neither side loves. A stablecoin settles a query against a knowledge graph in the time it takes to read this sentence. 2025 was the year every major payments company shipped a way for software to pay for itself. 2026 is the year that infrastructure gets used, gets tested, gets exploited, gets regulated, and starts to look less like a demo and more like plumbing. Ten pieces on what happens when things stop being provisional.</p>
+        </div>
+        <div style="margin-top:auto;padding-top:4vh;border-top:1px solid rgba(255,255,255,.1);">
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:0.35;margin-bottom:2rem;"><span data-i18n="contents">Contents</span></div>
+            <div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">01</span>
+            <span style="font-size:1.4rem;font-weight:500;">Seven Rails, No Winner</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">02</span>
+            <span style="font-size:1.4rem;font-weight:500;">A Cent at a Time</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">03</span>
+            <span style="font-size:1.4rem;font-weight:500;">Who Pays When the Agent Is Wrong</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">04</span>
+            <span style="font-size:1.4rem;font-weight:500;">One Hundred and Nine Machines for Every Person</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">05</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Body Comes Back to the Warehouse</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">06</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Ledger Grows a Government</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">07</span>
+            <span style="font-size:1.4rem;font-weight:500;">Whose Idea Was the Song</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">08</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Browser That Shops Without You</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">09</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Keys Nobody Reviews</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">10</span>
+            <span style="font-size:1.4rem;font-weight:500;">A Query, Settled</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div>
+        </div>
+    </section><section class="spread" style="background:#0a0a0a;color:#fff;">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,50vw,40rem);font-weight:900;opacity:.04;line-height:1;pointer-events:none;">01</div>
+        <div style="position:relative;z-index:1;max-width:52ch;">
+            <div style="font-size:1.1rem;font-weight:700;color:#ff3333;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="story">Story</span> 01</div>
+            <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);line-height:1;font-weight:900;margin-bottom:2rem;">Seven Rails, No Winner</h2>
+            <div style="width:80px;height:3px;background:#ff3333;margin-bottom:2rem;"></div>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.85;max-width:45ch;"><p>In a six-month span from September 2025 to March 2026, Google, Coinbase, Visa, Mastercard, Stripe and OpenAI each shipped a protocol for letting software agents pay on a person&#x27;s behalf. <a href="https://universalcommerceprotocol.fr/en/agentic-commerce" target="_blank" rel="noopener" style="text-underline-offset:4px">Google&#x27;s Agent Payments Protocol</a>, Visa&#x27;s Trusted Agent Protocol, Mastercard&#x27;s Agent Pay, Stripe&#x27;s Agentic Commerce Protocol and Machine Payments Protocol (co-built with the Tempo blockchain), and Coinbase&#x27;s x402 all solve some version of the same problem: how does a piece of software prove it is authorised to spend, and how does the other side get paid without a human clicking a button. None of them has won. As <a href="https://danieloon.ai/writing/agentic-payments.html" target="_blank" rel="noopener" style="text-underline-offset:4px">one tracker of the space puts it</a>, seven significant protocols now exist to govern how autonomous agents pay, launched inside a single year by six different companies, and most production agent-commerce flows in 2026 touch two or three of them at once rather than settling on one.</p><p>The card networks are not sitting this out. Mastercard&#x27;s Agent Pay went live for authenticated agent transactions in Singapore and Malaysia in April, <a href="https://www.oax.org/2026/08/17/Navigating-an-Increasingly-Agentic-Internet-Space.html" target="_blank" rel="noopener" style="text-underline-offset:4px">with DBS and UOB processing the first authenticated agent transactions</a> the month before. Visa struck a strategic deal with OpenAI in June to route ChatGPT&#x27;s agent payments through its network. McKinsey&#x27;s own estimate, cited by identity researchers tracking the space, puts agentic commerce at <a href="https://blog.identity.foundation/building-the-agentic-economy" target="_blank" rel="noopener" style="text-underline-offset:4px">$3 to 5 trillion in orchestrated global revenue by 2030</a>. The number that matters more than any of the projections is the one nobody disputes: every major payments company on earth now has a live answer to how an AI pays for something, and none of those answers talk to each other yet.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#ff3333;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://danieloon.ai/writing/agentic-payments.html" target="_blank" rel="noopener" style="font-size:1.15rem;color:#ff3333;text-decoration:underline;text-underline-offset:4px;">danieloon.ai/writing/agentic-payments.html</a></div>
+        </div>
+    </section><section class="spread" style="background:#0d1b2a;color:#e0d8c8;">
+        <div style="position:absolute;top:6vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(6rem,15vw,10rem);font-weight:100;color:#c9a84c;opacity:.25;line-height:1;">02</div>
+        <div style="max-width:55ch;position:relative;z-index:1;">
+            <div style="font-size:1rem;font-weight:600;color:#c9a84c;letter-spacing:.3em;text-transform:uppercase;margin-bottom:3rem;"><span data-i18n="chapter">Chapter</span> 2</div>
+            <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);line-height:1.05;font-weight:800;font-style:italic;margin-bottom:2.5rem;">A Cent at a Time</h2>
+            <blockquote style="border-left:4px solid #c9a84c;padding-left:2rem;margin:2.5rem 0;font-family:Fraunces,serif;font-size:2rem;font-style:italic;line-height:1.4;opacity:0.9;">"A 27-year-old placeholder in the HTTP specification just became working payment infrastructure."</blockquote>
+            <div style="font-size:1.3rem;line-height:1.9;opacity:.85;"><p>HTTP status code 402 has sat in the internet&#x27;s technical specification since 1997, reserved for &quot;Payment Required&quot; and never actually built. In July 2026 <a href="https://finance.yahoo.com/markets/crypto/articles/x402-foundation-activated-27-old-152440828.html" target="_blank" rel="noopener" style="text-underline-offset:4px">Coinbase and Cloudflare handed control of a protocol built on that code, x402, to an independent foundation</a>, turning a 27-year-old placeholder into working infrastructure for machine-to-machine payment. The idea is simple: a server asks for payment inside the HTTP response itself, an agent&#x27;s wallet pays in stablecoin, the resource unlocks, no account, no card form, no human in the loop.</p><p>The volume is real but still small change, literally. <a href="https://bitkan.com/news/detail/948324" target="_blank" rel="noopener" style="text-underline-offset:4px">AI agents moved 3.3 million USDC through x402 payments on Solana in a single week</a> in August, tied to actual API access and compute rather than speculation. Across the protocol as a whole, weekly transfer counts climbed from under a million in March to 8.7 million by mid-August, while total dollar volume for that week came to roughly $368,000, an average transaction of under four cents. Base still carries about half of all x402 activity. Solana&#x27;s share has grown from 6 percent to 38 percent in nine months. The pattern is agents paying fractions of a cent for an API call or a dataset, over and over, at a frequency no card network was ever built to clear. Whether that turns into meaningful economic value or stays a very large number of very small transactions is, for now, the actual open question.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#c9a84c;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://finance.yahoo.com/markets/crypto/articles/x402-foundation-activated-27-old-152440828.html" target="_blank" rel="noopener" style="font-size:1.15rem;color:#c9a84c;text-decoration:underline;text-underline-offset:4px;">finance.yahoo.com/markets/crypto/articles/x402-foundation-ac</a></div>
+        </div>
+    </section><section class="spread" style="background:#e8c4b8;color:#2d0a0a;text-align:center;">
+        <div style="position:absolute;top:50%;right:10vw;transform:translateY(-50%) rotate(-12deg);border:6px solid #cc2222;padding:1.5rem 3rem;font-family:Fraunces,serif;font-size:clamp(5rem,12vw,9rem);font-weight:900;color:#cc2222;opacity:.18;line-height:1;">03</div>
+        <div style="position:relative;z-index:1;max-width:50ch;margin:0 auto;">
+            <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;font-weight:900;margin-bottom:2rem;">Who Pays When the Agent Is Wrong</h2>
+            <div style="width:60px;height:4px;background:#cc2222;margin:0 auto 2rem;"></div>
+            <div style="font-size:1.4rem;line-height:1.8;"><p>Every payments company has shipped a way for an agent to spend money. Almost none of them has answered what happens when the agent spends it badly. <a href="https://www.oax.org/2026/08/17/Navigating-an-Increasingly-Agentic-Internet-Space.html" target="_blank" rel="noopener" style="text-underline-offset:4px">Research from the OAX Foundation</a> states the blocker plainly: agent-authorised payment is not a technology problem. The rails work. Stripe, Visa, Mastercard, Coinbase and Google have all shipped versions. The blocker is liability. Nobody has settled who absorbs the loss when an agent buys the wrong thing, buys at the wrong price, or is manipulated into buying at all.</p><p>That gap is not hypothetical. A documented pattern called prompt injection lets an instruction hidden in a webpage, a token, or a tool response quietly redirect what an agent does next, including what it signs. Security researchers have already catalogued cases of hidden text causing an agent&#x27;s wallet to authorise a transfer its owner never intended. Until a court, a regulator, or an industry body draws a clear line for who eats that loss, the OAX researchers note that most agent-to-agent payment stays walled inside a single company, where liability never has to cross an organisational boundary. That is why the seven competing payment protocols matter less than they look. The rails are the easy part. Nobody has shipped a working answer for who is responsible when the machine gets it wrong.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#cc2222;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://www.oax.org/2026/08/17/Navigating-an-Increasingly-Agentic-Internet-Space.html" target="_blank" rel="noopener" style="font-size:1.15rem;color:#cc2222;text-decoration:underline;text-underline-offset:4px;">www.oax.org/2026/08/17/Navigating-an-Increasingly-Agentic-In</a></div>
+        </div>
+    </section><section class="spread" style="background:#0c0c0c;color:#33ff33;font-family:'Courier New',monospace;">
+        <div>
+            <div style="font-size:1rem;opacity:.35;margin-bottom:3rem;">
+                <span style="color:#00cc00;">decent@magazine</span>:<span style="color:#6666ff;">~</span>$ cat issue/04.md
+            </div>
+            <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;">
+                <span style="font-size:clamp(4rem,10vw,7rem);font-weight:bold;opacity:.12;font-family:'Courier New',monospace;">&gt;</span>
+                <h2 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:bold;font-family:'Courier New',monospace;text-transform:uppercase;">One Hundred and Nine Machines for Every Person</h2>
+            </div>
+            <div style="font-size:1.3rem;line-height:2;max-width:60ch;border-left:3px solid #00cc00;padding-left:2rem;margin-left:1rem;"><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>Every enterprise now runs more software identities than human ones, and the gap is widening fast. [Palo Alto Networks&#x27; 2026 Identity Security Landscape report](https://www.elisity.com/blog/ai-agent-network-security-microsegmentation), based on a survey of nearly 3,000 security decision-makers, puts the ratio at 109 machine identities for every human employee, up from 82 to 1 the year before. Most of that growth is AI agents: API keys, service accounts and short-lived credentials that let software read data and take action without anyone logging in.</div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span></div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>In financial services specifically, [Catena Labs co-founder Sean Neville told a16z&#x27;s 2026 trend report](https://www.oreilly.com/radar/when-your-buyer-is-an-ai-agent) that non-human identities already outnumber human employees 96 to 1, and that each of those identities is a system with no relationship memory, no career stake in the outcome, and no susceptibility to the kind of persuasion that traditional account management was built around. Traditional identity management assumed a person on the other end who logs in, works, and eventually leaves. An agent might run continuously, touch a dozen systems in an hour, and act for several different people across a single shift. Gartner added AI agent identity to its Emerging Tech Impact Radar for 2026, and the identity industry, Okta, SailPoint and CrowdStrike among them, has spent the year building the equivalent of an HR department for software that never sleeps and never quits.</div></div>
+            <div style="margin-top:3rem;font-size:1.1rem;opacity:.45;"><span style="color:#00cc00;">// author:</span> Decent Editorial</div>
+            <div style="margin-top:1rem;"><a href="https://www.oreilly.com/radar/when-your-buyer-is-an-ai-agent" target="_blank" rel="noopener" style="font-size:1.15rem;color:#33ff33;text-decoration:underline;text-underline-offset:4px;">www.oreilly.com/radar/when-your-buyer-is-an-ai-agent</a></div>
+        </div>
+        <div style="position:absolute;bottom:8vh;left:8vw;width:12px;height:24px;background:#33ff33;animation:blink 1s infinite;"></div>
+    </section><section class="spread" style="background:#f5f0e8;color:#1a1a1a;">
+        <div style="max-width:58ch;">
+            <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1rem;">
+                <span style="font-family:Fraunces,serif;font-size:1.2rem;color:#8b0000;font-weight:600;"><span data-i18n="no">No.</span> 5</span>
+                <span style="flex:1;height:1px;background:#8b0000;opacity:.3;"></span>
+            </div>
+            <h2 class="d" style="font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;font-weight:800;margin-bottom:3rem;">The Body Comes Back to the Warehouse</h2>
+            <div style="font-size:1.35rem;line-height:1.9;">
+                <span class="d" style="float:left;font-size:clamp(5rem,12vw,8rem);line-height:.78;font-weight:900;color:#8b0000;margin-right:1rem;margin-top:.1em;">H</span>
+                <p>umanoid robots spent a decade as a research curiosity and 2026 as the year they started clocking real shifts. <a href="https://www.metavert.io/humanoid-robots" target="_blank" rel="noopener" style="text-underline-offset:4px">An estimated 13,000 units shipped globally in 2025, with projections exceeding 50,000 for 2026</a>, across a dozen companies now shipping or preparing to ship. The pitch is generality: a two-legged, two-armed machine can use the same tools, walk the same aisles, and reach the same shelves as a human worker without a warehouse being redesigned around it.</p><p>The first large-scale commercial test is already running. <a href="https://aaborbit.com/humanoid-robots-amazon-warehouses-figure-tesla-bots-deployment-2026" target="_blank" rel="noopener" style="text-underline-offset:4px">Amazon began deploying Figure&#x27;s 02 and Tesla&#x27;s Optimus Gen 2 across five US fulfilment centres in a 100-robot pilot</a>, performing item picking, packing and inventory management alongside a workforce of 1.5 million people. Early data has the robots running at about 60 percent of human speed with higher accuracy, working continuous shifts a person cannot. At roughly $50,000 a unit, Amazon expects the machines to pay for themselves within 18 months at current warehouse labour costs, with productivity approaching human levels within a year as the underlying models learn from experience. Boston Dynamics&#x27; electric Atlas is doing the equivalent work sequencing parts on Hyundai&#x27;s line. None of this is unsupervised, most tasks still lean on teleoperation behind the scenes, and analysts still put true mass deployment two to five years out. But the gap between demo and shift work closed faster in 2026 than almost anyone modelling the category expected.</p>
+            </div>
+            <div style="clear:both;"></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#8b0000;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://www.metavert.io/humanoid-robots" target="_blank" rel="noopener" style="font-size:1.15rem;color:#8b0000;text-decoration:underline;text-underline-offset:4px;">www.metavert.io/humanoid-robots</a></div>
+        </div>
+    </section><section class="spread" style="background:#1a1a2e;color:#fff;text-align:center;align-items:center;">
+        <div style="max-width:60ch;margin:0 auto;">
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#e94560;margin-bottom:2rem;"><span data-i18n="story">Story</span> 06</div>
+            <div class="d" style="font-size:clamp(8rem,25vw,20rem);font-weight:900;line-height:.85;color:#e94560;margin-bottom:2rem;letter-spacing:-.05em;">06</div>
+            <h2 class="d" style="font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:2rem;line-height:1.1;">The Ledger Grows a Government</h2>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.8;max-width:45ch;margin:0 auto;"><p>Underneath the payment protocol race sits a quieter story: the currency those protocols move is finally regulated. The US GENIUS Act, signed in July 2025, <a href="https://www.kucoin.com/blog/en-stablecoin-regulation-updates-2026-genius-act-mica-enforcement-global-compliance-trends" target="_blank" rel="noopener" style="text-underline-offset:4px">moved into its rulemaking phase through 2026</a>, with the Treasury proceeding toward final rules and the FDIC extending its comment period to accommodate the complexity. In Europe, MiCA is now in full enforcement, and the two regimes diverge in a way that shapes product design directly: <a href="https://rebelfi.io/blog/genius-act-vs-mica-stablecoin-regulation-comparison" target="_blank" rel="noopener" style="text-underline-offset:4px">under MiCA a company can earn yield on its own stablecoin holdings but cannot pass that yield to merchants or customers, while the GENIUS Act lets US processors build yield directly into what they offer</a>, turning settlement float into a genuine competitive difference rather than a back-office footnote.</p><p>Hong Kong, Singapore and Canada are each running their own version of the same catch-up, and the Financial Stability Board&#x27;s 2026 work programme is explicitly watching for cross-border risk as stablecoins stop being a crypto-native curiosity and start settling real commerce. That regulatory scaffolding is what makes the agent-payment protocols more than a novelty. A machine can only pay another machine at scale if the currency it is paying with has a clear legal answer to who backs it, who can freeze it, and who is liable when it moves. 2026 is the year that answer started to exist on both sides of the Atlantic, in two different and not entirely compatible forms.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#e94560;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://www.kucoin.com/blog/en-stablecoin-regulation-updates-2026-genius-act-mica-enforcement-global-compliance-trends" target="_blank" rel="noopener" style="font-size:1.15rem;color:#e94560;text-decoration:underline;text-underline-offset:4px;">www.kucoin.com/blog/en-stablecoin-regulation-updates-2026-ge</a></div>
+        </div>
+    </section><section class="spread sp" style="background:#fff;color:#0a0a0a;padding:0;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh;" class="spg">
+            <div style="background:#0055ff;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:8vh 6vw;">
+                <div style="font-family:Fraunces,serif;font-size:clamp(8rem,20vw,14rem);font-weight:900;opacity:.12;line-height:1;margin-bottom:2rem;">07</div>
+                <h2 class="d" style="font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;line-height:1.05;">Whose Idea Was the Song</h2>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;padding:8vh 6vw;background:#fafafa;">
+                <div style="font-size:1.35rem;line-height:1.9;max-width:40ch;"><p>The music industry spent two years suing AI music platforms and has spent 2026 quietly signing deals with them instead. <a href="https://musically.com/2026/08/12/suno-bmg-ai-music-licensing-deal" target="_blank" rel="noopener" style="text-underline-offset:4px">Suno reached a licensing agreement with BMG in August</a>, covering both recordings and publishing, following an earlier settlement with Warner Music Group. <a href="https://www.billboard.com/pro/suno-bmg-licensing-deal-ai-music-use" target="_blank" rel="noopener" style="text-underline-offset:4px">The BMG deal explicitly settles Suno&#x27;s past use of BMG&#x27;s catalogue and requires artists and songwriters to opt in before their work trains or appears in Suno&#x27;s outputs</a>, a structural concession the platform did not offer when it launched. Universal and Sony remain in litigation. Sony is the only major yet to settle with rival platform Udio.</p><p>The opt-in model is the real story, not the dollar figures neither company disclosed. It reframes the question from whether this should be allowed to who consented, and what they get for it. <a href="https://www.dacs.org.uk" target="_blank" rel="noopener" style="text-underline-offset:4px">The Design and Artists Copyright Society has been pushing the same logic into visual art</a>, backing musician Björn Ulvaeus&#x27;s call at the UN AI for Good summit for creators to share directly in AI-generated revenue rather than have it captured entirely by the platforms and the labels negotiating on their behalf. Warner Music has said publicly it expects its AI licensing deals to start showing up in subscription streaming revenue from its next fiscal year. The industry that spent a decade being disrupted by streaming has apparently decided the fastest way to survive an AI platform is to own a piece of it.</p></div>
+                <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#0055ff;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://musically.com/2026/08/12/suno-bmg-ai-music-licensing-deal" target="_blank" rel="noopener" style="font-size:1.15rem;color:#0055ff;text-decoration:underline;text-underline-offset:4px;">musically.com/2026/08/12/suno-bmg-ai-music-licensing-deal</a></div>
+            </div>
+        </div>
+    </section><section class="spread" style="background:#0f0f23;color:#fff;">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(12rem,35vw,28rem);font-weight:900;-webkit-text-stroke:2px rgba(0,255,204,.12);color:transparent;line-height:1;pointer-events:none;">08</div>
+        <div style="position:relative;z-index:1;max-width:52ch;">
+            <div style="display:inline-block;padding:.3rem 1.5rem;border:2px solid #00ffcc;font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#00ffcc;margin-bottom:2.5rem;">08</div>
+            <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);font-weight:900;line-height:1;margin-bottom:2rem;">The Browser That Shops Without You</h2>
+            <div style="width:100px;height:2px;background:#00ffcc;margin-bottom:2rem;"></div>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.85;"><p>Traffic from AI agents and agentic browsers to the open web is not a rounding error anymore. <a href="https://www.humanizeai.io/blog/article/ai-browser-statistics-adoption-traffic-user-growth-trends" target="_blank" rel="noopener" style="text-underline-offset:4px">HUMAN Security recorded a 6,900 percent increase in requests from AI agents and agentic browsers since July 2025</a>, with address-bar AI searches inside OpenAI&#x27;s Atlas browser alone generating an estimated 186 million queries a month. Brands are responding faster than the discourse around them suggests. <a href="https://www.swap-commerce.com/blog/agentic-commerce-statistics-2026" target="_blank" rel="noopener" style="text-underline-offset:4px">A survey by commerce platform Swap found 70 percent of brands, retailers and agencies are already testing or deploying an agentic storefront</a>, a version of their store built to be read and transacted with by software rather than browsed by a person, and only 7 percent have no plans to build one at all.</p><p>The gap the survey&#x27;s authors flag matters more than the adoption numbers: consumer engagement with agentic shopping is moving faster than brand adoption, and that gap does not usually close in the brand&#x27;s favour. Retailer-owned assistants are further along than the fully autonomous version of this story. Amazon&#x27;s own shopping assistant already reaches hundreds of millions of customers, and Walmart reports larger baskets among users of its Sparky assistant. The autonomous agent quietly comparing prices and completing checkout on someone else&#x27;s behalf, the version everyone pictures when they hear &quot;agentic commerce,&quot; is real but still the minority case. Most of the actual money moving through agent-shaped interfaces in 2026 is still a retailer&#x27;s own AI, working the till it already owned.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#00ffcc;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://www.humanizeai.io/blog/article/ai-browser-statistics-adoption-traffic-user-growth-trends" target="_blank" rel="noopener" style="font-size:1.15rem;color:#00ffcc;text-decoration:underline;text-underline-offset:4px;">www.humanizeai.io/blog/article/ai-browser-statistics-adoptio</a></div>
+        </div>
+    </section><section class="spread" style="background:#c4a882;color:#2c1810;">
+        <div style="position:absolute;bottom:8vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(10rem,25vw,18rem);font-weight:100;opacity:.1;line-height:1;pointer-events:none;">09</div>
+        <div style="max-width:50ch;margin-left:auto;position:relative;z-index:1;">
+            <div style="text-align:right;">
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:2rem;"><span data-i18n="part">Part</span> 9</div>
+                <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);font-weight:800;line-height:1.05;margin-bottom:2rem;">The Keys Nobody Reviews</h2>
+                <div style="width:80px;height:3px;background:#5c3d2e;margin-left:auto;margin-bottom:2.5rem;"></div>
+            </div>
+            <div style="font-size:1.35rem;line-height:1.9;"><p>The identity sprawl documented elsewhere in this issue has a cost, and 2026 is the year it started showing up in breach reports. <a href="https://www.elisity.com/blog/ai-agent-network-security-microsegmentation" target="_blank" rel="noopener" style="text-underline-offset:4px">IBM&#x27;s Cost of a Data Breach Report 2026 found that one in four malicious breaches were AI-enabled, a 56 percent increase year over year, and that those breaches cost roughly $6 million against a $4.99 million global average</a>. CrowdStrike&#x27;s own 2026 Global Threat Report found AI-enabled adversary operations up 89 percent year over year, with the average time an attacker needs to move from initial access to lateral movement falling to under half an hour.</p><p>The mechanism researchers keep flagging is prompt injection: a sentence hidden inside a webpage, a document, or a tool&#x27;s response that an AI agent reads as an instruction rather than as content, sometimes carrying enough authority to make the agent sign a transaction or hand over a credential its owner never approved. Traditional security tooling was not built to catch this, because the attack never touches a login screen or a phishing link a person might notice. It arrives as ordinary-looking text inside something the agent was already going to read. The identity and security industry&#x27;s answer, so far, is the unglamorous kind: short-lived credentials instead of standing ones, continuous monitoring instead of one-time approval, and an inventory of every agent, token and service account currently acting inside the business, on the theory that nobody can govern what they have not counted.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#5c3d2e;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://www.elisity.com/blog/ai-agent-network-security-microsegmentation" target="_blank" rel="noopener" style="font-size:1.15rem;color:#5c3d2e;text-decoration:underline;text-underline-offset:4px;">www.elisity.com/blog/ai-agent-network-security-microsegmenta</a></div>
+        </div>
+    </section><section class="spread" style="background:#ee3333;color:#fff;text-align:center;align-items:center;">
+        <div style="max-width:55ch;margin:0 auto;position:relative;">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,40vw,30rem);font-weight:900;color:#000;opacity:.06;line-height:1;pointer-events:none;">10</div>
+            <div style="position:relative;z-index:1;">
+                <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:1;margin-bottom:2rem;">A Query, Settled</h2>
+                <div style="width:80px;height:4px;background:#fff;margin:0 auto 2.5rem;"></div>
+                <div style="font-size:1.4rem;line-height:1.8;max-width:40ch;margin:0 auto;"><p>Everything in this issue is the same shape at different scales. A protocol war over how machines pay each other. A liability question nobody has answered. A robot doing a shift a person used to do. A licensing deal that turns a lawsuit into a royalty. A browser that shops without waiting to be asked. Settlement, in every sense of the word: the moment something provisional becomes final, and somebody has to be named as the party who is now responsible for it.</p><p>We ran our own small version of this in August. Two queries against a living knowledge graph, the kind of thing this magazine and the wider network around it are built out of, paid for in dUSD and settled on Kusama. The amounts were tiny, a proof rather than a product, in the same register as the four-cent machine payments elsewhere in this issue. But the shape was the same one running through everything above: a piece of software asking a question, paying for the answer, and the payment clearing without a human in the loop to approve it. We did not build that because it was novel. Every large payments company on earth built some version of it this year. We built it because a world model that people actually own has to be queryable and payable on the same terms as everything else being built around it right now, not on terms invented specially for us. The infrastructure in this issue is not a preview of some later transformation. It is the plumbing we are already standing on.</p></div>
+                <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#fff;opacity:0.7;text-align:center;">— Decent Editorial</div>
+            </div>
+        </div>
+    </section><section class="spread" style="background:#0a0a0a;color:#fff;justify-content:flex-end;">
+        <div>
+            <div style="opacity:.3;margin-bottom:4rem;">
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="contributors">Contributors</span></div>
+                <div style="font-size:1.2rem;margin-bottom:.5rem;">Decent Editorial</div>
+            </div>
+            <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:3rem;">
+                <h3 class="d" style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem;">DECENT</h3>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:.5rem;"><span data-i18n="issue">Issue</span> 4 · <span data-i18n-date="2026-09-01">September 2026</span></div>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:2rem;"><span data-i18n="theme">Theme</span>: Settlement</div>
+                <div style="font-size:1.15rem;opacity:.35;max-width:50ch;">
+                    <span data-i18n-html="blurb">Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.</span>
+                    <span data-i18n-html="submit">Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="lang-picker"></div>
+<script>
+(function(){
+  var T={"en": {"issue": "Issue", "contents": "Contents", "story": "Story", "chapter": "Chapter", "no": "No.", "part": "Part", "contributors": "Contributors", "theme": "Theme", "blurb": "Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.", "submit": "Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.", "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "space_reserved_title": "Space Reserved", "space_reserved_author": "The Editors", "space_reserved_content": "This space awaits a future contributor. Email richard@decent.partners with [Decent] in the subject."}, "es": {"issue": "Número", "contents": "Índice", "story": "Historia", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent es una revista mensual reunida a partir de contribuciones de una red distribuida de colaboradores.", "submit": "Envía tu texto para el próximo número: escribe a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> en el asunto.", "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], "space_reserved_title": "Espacio Reservado", "space_reserved_author": "Los Editores", "space_reserved_content": "Este espacio aguarda a un futuro colaborador. Escribe a richard@decent.partners con [Decent] en el asunto."}, "fr": {"issue": "Numéro", "contents": "Sommaire", "story": "Histoire", "chapter": "Chapitre", "no": "N°", "part": "Partie", "contributors": "Contributeurs", "theme": "Thème", "blurb": "Decent est un magazine mensuel composé de contributions d'un réseau distribué de collaborateurs.", "submit": "Soumettez à la prochaine édition : écrivez à <strong>richard@decent.partners</strong> avec <strong>[Decent]</strong> dans l'objet.", "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"], "space_reserved_title": "Espace Réservé", "space_reserved_author": "Les Éditeurs", "space_reserved_content": "Cet espace attend un futur contributeur. Écrivez à richard@decent.partners avec [Decent] dans l'objet."}, "pt": {"issue": "Edição", "contents": "Sumário", "story": "História", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent é uma revista mensal reunida a partir de contribuições de uma rede distribuída de colaboradores.", "submit": "Envie para a próxima edição: escreva para <strong>richard@decent.partners</strong> com <strong>[Decent]</strong> no assunto.", "months": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"], "space_reserved_title": "Espaço Reservado", "space_reserved_author": "Os Editores", "space_reserved_content": "Este espaço aguarda um futuro colaborador. Escreva para richard@decent.partners com [Decent] no assunto."}, "de": {"issue": "Ausgabe", "contents": "Inhalt", "story": "Beitrag", "chapter": "Kapitel", "no": "Nr.", "part": "Teil", "contributors": "Mitwirkende", "theme": "Thema", "blurb": "Decent ist ein monatliches Magazin, das aus Beiträgen eines verteilten Netzwerks von Mitarbeitenden zusammengestellt wird.", "submit": "Einreichung für die nächste Ausgabe: E-Mail an <strong>richard@decent.partners</strong> mit <strong>[Decent]</strong> im Betreff.", "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], "space_reserved_title": "Platz Reserviert", "space_reserved_author": "Die Redaktion", "space_reserved_content": "Dieser Platz wartet auf einen zukünftigen Beitragenden. E-Mail an richard@decent.partners mit [Decent] im Betreff."}, "it": {"issue": "Numero", "contents": "Sommario", "story": "Storia", "chapter": "Capitolo", "no": "N.", "part": "Parte", "contributors": "Collaboratori", "theme": "Tema", "blurb": "Decent è una rivista mensile composta da contributi di una rete distribuita di collaboratori.", "submit": "Invia per il prossimo numero: scrivi a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> nell'oggetto.", "months": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], "space_reserved_title": "Spazio Riservato", "space_reserved_author": "I Redattori", "space_reserved_content": "Questo spazio attende un futuro collaboratore. Scrivi a richard@decent.partners con [Decent] nell'oggetto."}, "zh": {"issue": "期", "contents": "目录", "story": "故事", "chapter": "章节", "no": "第", "part": "部分", "contributors": "贡献者", "theme": "主题", "blurb": "Decent 是一本月刊，汇集来自分布式协作网络的投稿。", "submit": "投稿下一期：发送邮件至 <strong>richard@decent.partners</strong>，主题包含 <strong>[Decent]</strong>。", "months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"], "space_reserved_title": "预留空间", "space_reserved_author": "编辑部", "space_reserved_content": "此处等待未来的投稿人。请发邮件至 richard@decent.partners，主题包含 [Decent]。"}};
+  var LABELS={"en": "EN", "es": "ES", "fr": "FR", "pt": "PT", "de": "DE", "it": "IT", "zh": "中文"};
+  var defaultLang="en";
+  var cur=localStorage.getItem("dm-lang")||defaultLang;
+  function applyLang(l){
+    var t=T[l]||T[defaultLang];
+    cur=l;
+    localStorage.setItem("dm-lang",l);
+    document.getElementById("root-html").lang=l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k=el.dataset.i18n;
+      if(t[k]!==undefined)el.textContent=t[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+      var k=el.dataset.i18nHtml;
+      if(t[k]!==undefined)el.innerHTML=t[k];
+    });
+    document.querySelectorAll("[data-i18n-date]").forEach(function(el){
+      var d=el.dataset.i18nDate;
+      var parts=d.split("-");
+      if(parts.length>=2){
+        var m=parseInt(parts[1],10)-1;
+        var y=parts[0];
+        var months=t.months||T[defaultLang].months;
+        el.textContent=months[m]+" "+y;
+      }
+    });
+    document.querySelectorAll("#lang-picker button").forEach(function(b){
+      b.classList.toggle("active",b.dataset.lang===l);
+    });
+  }
+  var picker=document.getElementById("lang-picker");
+  Object.keys(LABELS).forEach(function(l){
+    var b=document.createElement("button");
+    b.textContent=LABELS[l];
+    b.dataset.lang=l;
+    b.onclick=function(){applyLang(l);};
+    picker.appendChild(b);
+  });
+  applyLang(cur);
+})();
+</script>
+</body></html>
