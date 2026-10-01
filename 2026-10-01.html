@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="en" id="root-html"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Decent — Issue 5: Custody</title>
+<meta name="description" content="Decent Magazine Issue 5: Custody">
+<meta property="og:title" content="Decent — Issue 5: Custody">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-snap-type:y mandatory;-webkit-font-smoothing:antialiased;}
+body{font-family:Inter,system-ui,sans-serif;overflow-x:hidden;background:#0a0a0a;}
+.spread{min-height:100vh;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:center;padding:8vh 8vw;position:relative;overflow:hidden;}
+.d{font-family:Fraunces,serif;}
+a{color:inherit;}
+p{margin-bottom:1em;}p:last-child{margin-bottom:0;}
+@keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+@media(max-width:768px){
+  .spread{padding:6vh 6vw;}
+  .spg{grid-template-columns:1fr!important;}
+  .spg>div{padding:8vh 6vw!important;}
+}
+@media print{html{scroll-snap-type:none;}.spread{page-break-after:always;min-height:auto;padding:2cm;}}
+#lang-picker{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end;max-width:220px;}
+#lang-picker button{font-family:Inter,sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;padding:.3rem .65rem;border:1px solid rgba(255,255,255,.25);background:rgba(10,10,10,.75);color:rgba(255,255,255,.55);cursor:pointer;border-radius:2px;backdrop-filter:blur(6px);transition:all .15s;text-transform:uppercase;}
+#lang-picker button:hover{color:#fff;border-color:rgba(255,255,255,.6);}
+#lang-picker button.active{color:#fff;border-color:#fff;background:rgba(255,255,255,.12);}
+</style></head><body>
+<section class="spread" style="background:#0a0a0a;color:#fff;" lang="en">
+        <div style="position:absolute;top:8vh;left:8vw;font-size:1.2rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:0.4;"><span data-i18n="issue">Issue</span> 5</div>
+        <div style="position:absolute;top:8vh;right:8vw;font-size:1.2rem;font-weight:500;opacity:0.4;"><span data-i18n-date="2026-10-01">October 2026</span></div>
+        <div style="margin-bottom:6vh;">
+            <h1 class="d" style="font-size:clamp(5rem,14vw,12rem);line-height:.9;font-weight:900;letter-spacing:-.03em;">DECENT</h1>
+            <div style="width:120px;height:4px;background:#ff3333;margin:3rem 0;"></div>
+            <h2 class="d" style="font-size:clamp(2rem,5vw,4rem);font-weight:300;font-style:italic;opacity:0.8;">Custody</h2>
+            <p style="font-size:1.4rem;line-height:1.6;opacity:0.7;max-width:40ch;margin-top:3rem;">Last month was about settlement, the point at which a payment or a record stops being provisional. This issue asks the question that comes next: once it has settled, who holds it? A public IPFS gateway switched off on 30 September. A passkey that lives with whichever platform syncs it. A dollar balance that its issuer can freeze. A recovery form that opens a strong lock from the side. Ten pieces on the difference between having something and having access to it, and on what it takes to move from one to the other.</p>
+        </div>
+        <div style="margin-top:auto;padding-top:4vh;border-top:1px solid rgba(255,255,255,.1);">
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:0.35;margin-bottom:2rem;"><span data-i18n="contents">Contents</span></div>
+            <div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">01</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Gateway Was Never Ours</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">02</span>
+            <span style="font-size:1.4rem;font-weight:500;">Five Billion Keys, Three Landlords</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">03</span>
+            <span style="font-size:1.4rem;font-weight:500;">A Freeze Is a Feature</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">04</span>
+            <span style="font-size:1.4rem;font-weight:500;">Free Is a Billing Model</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">05</span>
+            <span style="font-size:1.4rem;font-weight:500;">Who Holds the Spare Key</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">06</span>
+            <span style="font-size:1.4rem;font-weight:500;">Leaving Is the Test</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">07</span>
+            <span style="font-size:1.4rem;font-weight:500;">The Archive Outlives the Archivist</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">08</span>
+            <span style="font-size:1.4rem;font-weight:500;">Memory Held in Common</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">09</span>
+            <span style="font-size:1.4rem;font-weight:500;">Keys, Rules and the Person Who Wrote Them</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div><div style="display:flex;align-items:baseline;gap:1.5rem;margin-bottom:1.2rem;">
+            <span style="font-family:Fraunces,serif;font-size:1.5rem;opacity:0.35;min-width:2.5rem;">10</span>
+            <span style="font-size:1.4rem;font-weight:500;">Custody, Settled</span>
+            <span style="font-size:1.1rem;opacity:0.4;margin-left:auto;white-space:nowrap;">Decent Editorial</span>
+        </div>
+        </div>
+    </section><section class="spread" style="background:#0a0a0a;color:#fff;">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,50vw,40rem);font-weight:900;opacity:.04;line-height:1;pointer-events:none;">01</div>
+        <div style="position:relative;z-index:1;max-width:52ch;">
+            <div style="font-size:1.1rem;font-weight:700;color:#ff3333;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="story">Story</span> 01</div>
+            <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);line-height:1;font-weight:900;margin-bottom:2rem;">The Gateway Was Never Ours</h2>
+            <div style="width:80px;height:3px;background:#ff3333;margin-bottom:2rem;"></div>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.85;max-width:45ch;"><p>On 30 September 2026, Interplanetary Shipyard, the team that maintains the original IPFS implementation, <a href="https://cryptorank.io/news/feed/fa7f4-shipyard-ipfs-operations-halt-september-30" target="_blank" rel="noopener" style="text-underline-offset:4px">stopped operating its public infrastructure</a> after Protocol Labs ended its funding. That covers the Kubo and Helia software releases, the bootstrap nodes that help new peers find the network, and the two public gateways, ipfs.io and dweb.link, that thousands of sites used to turn a content address into a web page.</p><p>The gateway&#x27;s own front page said what it was. <a href="https://ipfs.io" target="_blank" rel="noopener" style="text-underline-offset:4px">It is provided free, as-is, and &quot;not intended to be part of your critical path or production infrastructure.&quot;</a> Production applications used it as a free content delivery network anyway, because it was there and it worked. A host that describes itself as a courtesy and a user base that treats it as a utility are two sets of expectations that cannot both hold, and the gap between them is where outages come from.</p><p>Nobody did anything wrong here. A public good met a load it was never priced for, and the people paying for it stopped. The useful lesson is structural: a protocol can be decentralised while the door most people walk through is run by one team on one budget. Content addressing means the data itself can be verified wherever it is served. It does not mean anyone is obliged to serve it. Custody of the bytes and custody of the route to the bytes are separate questions, and the second one is the one that failed on a Wednesday.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#ff3333;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://cryptorank.io/news/feed/fa7f4-shipyard-ipfs-operations-halt-september-30" target="_blank" rel="noopener" style="font-size:1.15rem;color:#ff3333;text-decoration:underline;text-underline-offset:4px;">cryptorank.io/news/feed/fa7f4-shipyard-ipfs-operations-halt-</a></div>
+        </div>
+    </section><section class="spread" style="background:#0d1b2a;color:#e0d8c8;">
+        <div style="position:absolute;top:6vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(6rem,15vw,10rem);font-weight:100;color:#c9a84c;opacity:.25;line-height:1;">02</div>
+        <div style="max-width:55ch;position:relative;z-index:1;">
+            <div style="font-size:1rem;font-weight:600;color:#c9a84c;letter-spacing:.3em;text-transform:uppercase;margin-bottom:3rem;"><span data-i18n="chapter">Chapter</span> 2</div>
+            <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);line-height:1.05;font-weight:800;font-style:italic;margin-bottom:2.5rem;">Five Billion Keys, Three Landlords</h2>
+            <blockquote style="border-left:4px solid #c9a84c;padding-left:2rem;margin:2.5rem 0;font-family:Fraunces,serif;font-size:2rem;font-style:italic;line-height:1.4;opacity:0.9;">"A key you cannot move is a lease on your own front door."</blockquote>
+            <div style="font-size:1.3rem;line-height:1.9;opacity:.85;"><p>The FIDO Alliance&#x27;s 2026 state-of-passkeys report <a href="https://palm.tencent.com/resources/passwordless-vs-passkey-biometric-authentication-guide?type=Tech" target="_blank" rel="noopener" style="text-underline-offset:4px">puts passkeys in active use at five billion</a>, with 90 per cent of consumers aware of them and three quarters having switched one on. As a piece of security engineering it is a genuine success. A passkey is bound to the site that created it, so a convincing fake site gets nothing worth stealing.</p><p>The convenience comes from syncing, and syncing has a landlord. A synced passkey is backed up through Apple, Google, Microsoft or a password manager, and <a href="https://palm.tencent.com/resources/passwordless-vs-passkey-biometric-authentication-guide?type=Tech" target="_blank" rel="noopener" style="text-underline-offset:4px">its security is largely inherited from that cloud account</a>. Moving credentials between ecosystems <a href="https://www.authgear.com/post/passkey-vs-password-why-passkeys-are-the-future-of-security" target="_blank" rel="noopener" style="text-underline-offset:4px">is still clumsy</a>, and switching phones can still mean re-enrolling accounts one by one. Hardware-bound keys reach the highest assurance level, but <a href="https://www.corbado.com/blog/hardware-passkey-adoption-observability" target="_blank" rel="noopener" style="text-underline-offset:4px">synced ones are capped a tier lower</a> precisely because the private key can leave the device.</p><p>None of this makes passkeys a bad idea. It makes them an incomplete one. The standard answered the question of how to prove you are you without a password. It left open who holds the thing that proves it, and what happens to your accounts if that holder changes the terms. The design question for the next few years is portability: a credential that moves when you do, and that a community or an organisation can enrol without borrowing a platform&#x27;s permission to exist.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#c9a84c;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://palm.tencent.com/resources/passwordless-vs-passkey-biometric-authentication-guide?type=Tech" target="_blank" rel="noopener" style="font-size:1.15rem;color:#c9a84c;text-decoration:underline;text-underline-offset:4px;">palm.tencent.com/resources/passwordless-vs-passkey-biometric</a></div>
+        </div>
+    </section><section class="spread" style="background:#e8c4b8;color:#2d0a0a;text-align:center;">
+        <div style="position:absolute;top:50%;right:10vw;transform:translateY(-50%) rotate(-12deg);border:6px solid #cc2222;padding:1.5rem 3rem;font-family:Fraunces,serif;font-size:clamp(5rem,12vw,9rem);font-weight:900;color:#cc2222;opacity:.18;line-height:1;">03</div>
+        <div style="position:relative;z-index:1;max-width:50ch;margin:0 auto;">
+            <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;font-weight:900;margin-bottom:2rem;">A Freeze Is a Feature</h2>
+            <div style="width:60px;height:4px;background:#cc2222;margin:0 auto 2rem;"></div>
+            <div style="font-size:1.4rem;line-height:1.8;"><p>In February 2026 Tether said it had <a href="https://www.reuters.com/sustainability/boards-policy-regulation/tether-says-it-has-frozen-42-billion-its-stablecoin-over-crime-links-2026-02-27" target="_blank" rel="noopener" style="text-underline-offset:4px">frozen about $4.2 billion of its tokens over links to illicit activity</a>, most of it since 2023. In April it froze <a href="https://www.trmlabs.com/resources/blog/t3-financial-crime-unit-a-model-for-public-private-disruption-in-the-age-of-stablecoins" target="_blank" rel="noopener" style="text-underline-offset:4px">more than $344 million across two addresses</a> in coordination with US authorities, the largest single action on record. The same function that stops a theft can stop a payroll, and the holder has no vote on which.</p><p>Freezing is not a defect in a dollar stablecoin. It is the specification. A token that claims to be a dollar inherits the compliance duties of a dollar, and those duties require an administrator who can say no. <a href="https://eco.com/support/en/articles/11779019-what-is-openusdt-ousdt-censorship-resistant-usdt" target="_blank" rel="noopener" style="text-underline-offset:4px">USDT and USDC both carry admin-key freeze functions</a>, while a few overcollateralised alternatives do not, at the price of a much smaller market. People who describe this as censorship and people who describe it as consumer protection are describing one mechanism from two positions.</p><p>The sensible response is to know which kind of money you are holding. A balance on a public ledger is custody in the technical sense, because you hold the key. Whether it is custody in the practical sense depends on whether the issuer can move it regardless. Treasuries, payroll and anything with a deadline should be designed knowing the answer. The honest label for most stablecoin balances today is &quot;yours, subject to the issuer&quot;, and the rules that produced that label are ones we wrote.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#cc2222;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://www.reuters.com/sustainability/boards-policy-regulation/tether-says-it-has-frozen-42-billion-its-stablecoin-over-crime-links-2026-02-27" target="_blank" rel="noopener" style="font-size:1.15rem;color:#cc2222;text-decoration:underline;text-underline-offset:4px;">www.reuters.com/sustainability/boards-policy-regulation/teth</a></div>
+        </div>
+    </section><section class="spread" style="background:#0c0c0c;color:#33ff33;font-family:'Courier New',monospace;">
+        <div>
+            <div style="font-size:1rem;opacity:.35;margin-bottom:3rem;">
+                <span style="color:#00cc00;">decent@magazine</span>:<span style="color:#6666ff;">~</span>$ cat issue/04.md
+            </div>
+            <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;">
+                <span style="font-size:clamp(4rem,10vw,7rem);font-weight:bold;opacity:.12;font-family:'Courier New',monospace;">&gt;</span>
+                <h2 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:bold;font-family:'Courier New',monospace;text-transform:uppercase;">Free Is a Billing Model</h2>
+            </div>
+            <div style="font-size:1.3rem;line-height:2;max-width:60ch;border-left:3px solid #00cc00;padding-left:2rem;margin-left:1rem;"><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>Pinata&#x27;s account of the IPFS gateway changes reads like a standard tragedy of the commons. [A premium asset made free and unregulated gets used until it is exhausted](https://pinata.cloud/blog/beyond-the-public-commons-what-the-ipfs-gateway-pivot-means-for-businesses), and the steward&#x27;s answer is rate limits that tighten across 2026. It is a tidy description and it is correct as far as it goes. What it leaves out is that the commons was never a commons in the economic sense. Someone paid for every request. The payer was just not the requester.</div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span></div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>A metered price turns that hidden transfer into a visible one. Decent&#x27;s own query meter is the smallest working example we have: a base charge of 0.01 dUSD plus 0.001 per row returned, settled on Kusama Asset Hub, with seven real payments cleared so far. The sum is trivial. What matters is that the answer to &quot;who pays for this read?&quot; is written down at the moment of the read, by the person asking, instead of being discovered a year later when a funder walks away.</div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span></div><div style="margin-bottom:.8rem;"><span style="color:#00cc00;opacity:.5;">$ </span>We should be honest about what that proves. Every payer so far has been us, so the meter has shown that the mechanism works and has not yet shown that an outsider will use it. The design principle survives either way. Infrastructure that people depend on needs a revenue line that scales with the dependence. Pricing it is not hostile to openness. It is what lets the thing still exist in five years.</div></div>
+            <div style="margin-top:3rem;font-size:1.1rem;opacity:.45;"><span style="color:#00cc00;">// author:</span> Decent Editorial</div>
+            <div style="margin-top:1rem;"><a href="https://pinata.cloud/blog/beyond-the-public-commons-what-the-ipfs-gateway-pivot-means-for-businesses" target="_blank" rel="noopener" style="font-size:1.15rem;color:#33ff33;text-decoration:underline;text-underline-offset:4px;">pinata.cloud/blog/beyond-the-public-commons-what-the-ipfs-ga</a></div>
+        </div>
+        <div style="position:absolute;bottom:8vh;left:8vw;width:12px;height:24px;background:#33ff33;animation:blink 1s infinite;"></div>
+    </section><section class="spread" style="background:#f5f0e8;color:#1a1a1a;">
+        <div style="max-width:58ch;">
+            <div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1rem;">
+                <span style="font-family:Fraunces,serif;font-size:1.2rem;color:#8b0000;font-weight:600;"><span data-i18n="no">No.</span> 5</span>
+                <span style="flex:1;height:1px;background:#8b0000;opacity:.3;"></span>
+            </div>
+            <h2 class="d" style="font-size:clamp(2.5rem,6vw,4.5rem);line-height:1.1;font-weight:800;margin-bottom:3rem;">Who Holds the Spare Key</h2>
+            <div style="font-size:1.35rem;line-height:1.9;">
+                <span class="d" style="float:left;font-size:clamp(5rem,12vw,8rem);line-height:.78;font-weight:900;color:#8b0000;margin-right:1rem;margin-top:.1em;">E</span>
+                <p>very authentication system has two doors. The front one is the sign-in, which gets the engineering attention, the conference talks and the benchmarks. The side one is recovery, which is what runs when a phone is lost, a laptop is stolen or a person simply forgets how they set things up. An attacker who cannot defeat the first door will look for the second, and the second is usually staffed by a support queue and a form.</p><p>This is why the practical advice on passwordless rollouts keeps landing on the same point: <a href="https://tech-insider.org/passkeys-vs-passwords-2026" target="_blank" rel="noopener" style="text-underline-offset:4px">harden the recovery flow first</a>, because passwordless login sitting on a weak recovery process is not passwordless security. The cryptography can be perfect and the account can still be reclaimed by whoever is most persuasive on the phone. Recovery is where custody gets decided in practice, since it names the party who can override the key.</p><p>For a community that holds its own keys, the question has a different shape. A recovery route run by one operator reintroduces the single point you were trying to remove. A route run by several people who each hold a share, and who each have to agree, spreads the same authority across people who know you. That costs convenience and adds a coordination step. It also means the answer to &quot;who can get you back in?&quot; is a list of names you chose, which is a much better answer than a ticket number.</p>
+            </div>
+            <div style="clear:both;"></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#8b0000;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://www.getmailbird.com/passkeys-email-login-passwordless-authentication" target="_blank" rel="noopener" style="font-size:1.15rem;color:#8b0000;text-decoration:underline;text-underline-offset:4px;">www.getmailbird.com/passkeys-email-login-passwordless-authen</a></div>
+        </div>
+    </section><section class="spread" style="background:#1a1a2e;color:#fff;text-align:center;align-items:center;">
+        <div style="max-width:60ch;margin:0 auto;">
+            <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#e94560;margin-bottom:2rem;"><span data-i18n="story">Story</span> 06</div>
+            <div class="d" style="font-size:clamp(8rem,25vw,20rem);font-weight:900;line-height:.85;color:#e94560;margin-bottom:2rem;letter-spacing:-.05em;">06</div>
+            <h2 class="d" style="font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:2rem;line-height:1.1;">Leaving Is the Test</h2>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.8;max-width:45ch;margin:0 auto;"><p>There is an easy way to find out whether you hold something or merely have access to it. Try to leave. A bank account, an accountancy practice, a hosting plan, a payroll provider, a gateway: each looks like custody while the relationship is going well and reveals its true nature on the day you ask for everything back.</p><p>The checklist is short and unglamorous. Can you export the full record in a format another supplier can read? Do you hold copies of what has been filed on your behalf, or only the right to ask for them? Is the thing you depend on addressed by something you control, such as your own domain, or by something the supplier controls? When Cloudflare wound down its public IPFS gateway in 2024, <a href="https://blog.cloudflare.com/cloudflares-public-ipfs-gateways-and-supporting-interplanetary-shipyard" target="_blank" rel="noopener" style="text-underline-offset:4px">every site pointing at its hostnames had to switch to another host</a> by a fixed date. The ones that had used their own domain in front of whichever gateway they chose changed one line. The ones that had hard-coded the supplier&#x27;s name had a project.</p><p>An organisation should be able to reproduce its own records from its own files without anyone&#x27;s cooperation. Where that is not true, the gap is a dependency, and dependencies are fine so long as they are listed. The mistake is the unlisted one, found out about during the notice period.</p></div>
+            
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#e94560;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://web.archive.org/web/20260515025702/https://blog.cloudflare.com/cloudflares-public-ipfs-gateways-and-supporting-interplanetary-shipyard" target="_blank" rel="noopener" style="font-size:1.15rem;color:#e94560;text-decoration:underline;text-underline-offset:4px;">web.archive.org/web/20260515025702/blog.cloudflare.com/cloud</a></div>
+        </div>
+    </section><section class="spread sp" style="background:#fff;color:#0a0a0a;padding:0;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;min-height:100vh;" class="spg">
+            <div style="background:#0055ff;color:#fff;display:flex;flex-direction:column;justify-content:center;padding:8vh 6vw;">
+                <div style="font-family:Fraunces,serif;font-size:clamp(8rem,20vw,14rem);font-weight:900;opacity:.12;line-height:1;margin-bottom:2rem;">07</div>
+                <h2 class="d" style="font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;line-height:1.05;">The Archive Outlives the Archivist</h2>
+            </div>
+            <div style="display:flex;flex-direction:column;justify-content:center;padding:8vh 6vw;background:#fafafa;">
+                <div style="font-size:1.35rem;line-height:1.9;max-width:40ch;"><p>Content addressing has a simple and radical property. The name of a file is derived from the file itself, so anyone who receives it can check that what arrived is what was asked for. It is the reason <a href="https://ipfs.io" target="_blank" rel="noopener" style="text-underline-offset:4px">the ipfs.io gateway describes itself as verifying data against the requested identifier</a> before returning it. The server is no longer trusted. Only the arithmetic is.</p><p>That property is worth more than the people building on it tend to claim, and less than the slogans suggest. It means an archive can survive the loss of any particular host, provided someone, somewhere, is still holding a copy. It does not conjure the copy. The identifier proves integrity and says nothing about availability, and availability is a matter of who has agreed to keep pinning the bytes and what they are being paid to do it.</p><p>So the working discipline is two layers. Name your records by content, so that any copy anywhere is as good as any other. Then run your own pinning for the records you cannot afford to lose, behind a gateway that serves only what you have chosen to serve, and let public gateways be a convenience on top. Our own read path for our own pins follows this shape. The identifier gives you portability, and the pin gives you survival. Neither does the other&#x27;s job.</p></div>
+                <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#0055ff;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://ipfs.io" target="_blank" rel="noopener" style="font-size:1.15rem;color:#0055ff;text-decoration:underline;text-underline-offset:4px;">ipfs.io</a></div>
+            </div>
+        </div>
+    </section><section class="spread" style="background:#0f0f23;color:#fff;">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(12rem,35vw,28rem);font-weight:900;-webkit-text-stroke:2px rgba(0,255,204,.12);color:transparent;line-height:1;pointer-events:none;">08</div>
+        <div style="position:relative;z-index:1;max-width:52ch;">
+            <div style="display:inline-block;padding:.3rem 1.5rem;border:2px solid #00ffcc;font-size:1rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#00ffcc;margin-bottom:2.5rem;">08</div>
+            <h2 class="d" style="font-size:clamp(3rem,7vw,6rem);font-weight:900;line-height:1;margin-bottom:2rem;">Memory Held in Common</h2>
+            <div style="width:100px;height:2px;background:#00ffcc;margin-bottom:2rem;"></div>
+            <div style="font-size:1.3rem;line-height:1.8;opacity:.85;"><p>A group that meets regularly accumulates a record: what was said, what was decided, who made what. In most groups that record lives in a chat history, a few people&#x27;s notes and a shared drive nobody tidies. It is memory in the loosest sense, held by whoever happens to still have access, searchable only by whoever remembers where to look.</p><p>A shared world model changes the custody question rather than the storage question. The record is assembled from what the group itself said and made, it can be queried in plain language, and the group, not a platform, decides who reads what and on what terms. The key design choices are about governance, not technology: whose voice is quoted, how a contributor withdraws, and what the model is never allowed to answer from. Each of those is a rule someone has to write down before the first query is run.</p><p>There is a harder claim underneath, which is that a collective&#x27;s memory is a form of capital. The people who produced it hold a stake in it, and the interesting commercial work is in finding ways for that stake to be recognised without turning every conversation into a transaction. We have not solved that. What we can say is that the starting position matters, and a record that begins life owned by the people in it is a different object from one that is assembled somewhere else and rented back to them.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#00ffcc;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://decent.partners" target="_blank" rel="noopener" style="font-size:1.15rem;color:#00ffcc;text-decoration:underline;text-underline-offset:4px;">decent.partners</a></div>
+        </div>
+    </section><section class="spread" style="background:#c4a882;color:#2c1810;">
+        <div style="position:absolute;bottom:8vh;right:8vw;font-family:Fraunces,serif;font-size:clamp(10rem,25vw,18rem);font-weight:100;opacity:.1;line-height:1;pointer-events:none;">09</div>
+        <div style="max-width:50ch;margin-left:auto;position:relative;z-index:1;">
+            <div style="text-align:right;">
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:2rem;"><span data-i18n="part">Part</span> 9</div>
+                <h2 class="d" style="font-size:clamp(3rem,7vw,5.5rem);font-weight:800;line-height:1.05;margin-bottom:2rem;">Keys, Rules and the Person Who Wrote Them</h2>
+                <div style="width:80px;height:3px;background:#5c3d2e;margin-left:auto;margin-bottom:2.5rem;"></div>
+            </div>
+            <div style="font-size:1.35rem;line-height:1.9;"><p>It would be easy to read this month&#x27;s stories as a catalogue of grievances: a gateway switched off, a key tied to a platform, a balance frozen across <a href="https://www.coindesk.com/markets/2026/01/12/tether-freezes-usd182-million-in-usdt-stablecoin-across-five-tron-blockchain-wallets" target="_blank" rel="noopener" style="text-underline-offset:4px">five wallets in a single day</a>, a recovery form that can be talked round. That reading is wrong, and it is also unhelpful. Each of those outcomes is what the system was built to produce. A free service stays free until its budget ends. A convenient credential syncs through whoever offers the sync. A dollar token obeys dollar rules.</p><p>The way out of that is the one Stuart Russell has been describing for years in a different context. The fault lies in the fixed objective, and the answer is to rewrite the rule so the outcome cannot happen, instead of hoping the party running it behaves well. Applied to custody, the rewrite is concrete. Hold your own keys where the stakes allow it. Name your records by content. Price your reads. Put recovery in the hands of people you picked. Keep a list of what you rent and what replaces it.</p><p>None of this removes dependence, and nothing could. It changes dependence from an accident into a decision, with a date next to it and a name beside the fallback. That is a modest ambition, and a more durable one than any promise that the next supplier will be kinder than the last.</p></div>
+            <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#5c3d2e;opacity:0.7;">— Decent Editorial</div><div style="margin-top:1rem;"><a href="https://www.coindesk.com/markets/2026/01/12/tether-freezes-usd182-million-in-usdt-stablecoin-across-five-tron-blockchain-wallets" target="_blank" rel="noopener" style="font-size:1.15rem;color:#5c3d2e;text-decoration:underline;text-underline-offset:4px;">www.coindesk.com/markets/2026/01/12/tether-freezes-usd182-mi</a></div>
+        </div>
+    </section><section class="spread" style="background:#ee3333;color:#fff;text-align:center;align-items:center;">
+        <div style="max-width:55ch;margin:0 auto;position:relative;">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:Fraunces,serif;font-size:clamp(15rem,40vw,30rem);font-weight:900;color:#000;opacity:.06;line-height:1;pointer-events:none;">10</div>
+            <div style="position:relative;z-index:1;">
+                <h2 class="d" style="font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:1;margin-bottom:2rem;">Custody, Settled</h2>
+                <div style="width:80px;height:4px;background:#fff;margin:0 auto 2.5rem;"></div>
+                <div style="font-size:1.4rem;line-height:1.8;max-width:40ch;margin:0 auto;"><p>Last month&#x27;s issue was about settlement: the moment a payment, a liability or a query stops being provisional. This month&#x27;s follows from it. Once something has settled, the question is who keeps it. A settled payment sits on a ledger that someone operates. A settled agreement sits in a contract that someone holds. A settled record sits in an archive that someone pins.</p><p>Looked at across the nine pieces before this one, custody turns out not to be a single thing. It is at least four. There is custody of the bytes, which content addressing and your own pinning can secure. There is custody of the route to the bytes, which a gateway you control can secure. There is custody of the credential, which depends on whether it can move when you do. And there is custody of the value, which depends on whether anyone else holds an override. A system can score well on three and fail on the fourth, and users will only learn which when it matters.</p><p>The practical test is the one in the middle of this issue. Ask what happens on the day the supplier stops answering. If the answer is a short list of steps you can take yourself, you hold it. If the answer starts with &quot;we would need to ask&quot;, you have access, and access is a perfectly good thing to have so long as it is labelled as such.</p></div>
+                <div style="margin-top:2.5rem;font-size:1.15rem;font-weight:600;color:#fff;opacity:0.7;text-align:center;">— Decent Editorial</div><div style="margin-top:1rem;text-align:center;"><a href="https://decent.partners" target="_blank" rel="noopener" style="font-size:1.15rem;color:#fff;text-decoration:underline;text-underline-offset:4px;">decent.partners</a></div>
+            </div>
+        </div>
+    </section><section class="spread" style="background:#0a0a0a;color:#fff;justify-content:flex-end;">
+        <div>
+            <div style="opacity:.3;margin-bottom:4rem;">
+                <div style="font-size:1rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;margin-bottom:2rem;"><span data-i18n="contributors">Contributors</span></div>
+                <div style="font-size:1.2rem;margin-bottom:.5rem;">Decent Editorial</div>
+            </div>
+            <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:3rem;">
+                <h3 class="d" style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin-bottom:1rem;">DECENT</h3>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:.5rem;"><span data-i18n="issue">Issue</span> 5 · <span data-i18n-date="2026-10-01">October 2026</span></div>
+                <div style="font-size:1.2rem;opacity:.45;margin-bottom:2rem;"><span data-i18n="theme">Theme</span>: Custody</div>
+                <div style="font-size:1.15rem;opacity:.35;max-width:50ch;">
+                    <span data-i18n-html="blurb">Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.</span>
+                    <span data-i18n-html="submit">Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="lang-picker"></div>
+<script>
+(function(){
+  var T={"en": {"issue": "Issue", "contents": "Contents", "story": "Story", "chapter": "Chapter", "no": "No.", "part": "Part", "contributors": "Contributors", "theme": "Theme", "blurb": "Decent is a monthly magazine assembled from contributions by a distributed network of collaborators.", "submit": "Submit to the next issue: email <strong>richard@decent.partners</strong> with <strong>[Decent]</strong> in the subject line.", "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "space_reserved_title": "Space Reserved", "space_reserved_author": "The Editors", "space_reserved_content": "This space awaits a future contributor. Email richard@decent.partners with [Decent] in the subject."}, "es": {"issue": "Número", "contents": "Índice", "story": "Historia", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent es una revista mensual reunida a partir de contribuciones de una red distribuida de colaboradores.", "submit": "Envía tu texto para el próximo número: escribe a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> en el asunto.", "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"], "space_reserved_title": "Espacio Reservado", "space_reserved_author": "Los Editores", "space_reserved_content": "Este espacio aguarda a un futuro colaborador. Escribe a richard@decent.partners con [Decent] en el asunto."}, "fr": {"issue": "Numéro", "contents": "Sommaire", "story": "Histoire", "chapter": "Chapitre", "no": "N°", "part": "Partie", "contributors": "Contributeurs", "theme": "Thème", "blurb": "Decent est un magazine mensuel composé de contributions d'un réseau distribué de collaborateurs.", "submit": "Soumettez à la prochaine édition : écrivez à <strong>richard@decent.partners</strong> avec <strong>[Decent]</strong> dans l'objet.", "months": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"], "space_reserved_title": "Espace Réservé", "space_reserved_author": "Les Éditeurs", "space_reserved_content": "Cet espace attend un futur contributeur. Écrivez à richard@decent.partners avec [Decent] dans l'objet."}, "pt": {"issue": "Edição", "contents": "Sumário", "story": "História", "chapter": "Capítulo", "no": "Nº", "part": "Parte", "contributors": "Colaboradores", "theme": "Tema", "blurb": "Decent é uma revista mensal reunida a partir de contribuições de uma rede distribuída de colaboradores.", "submit": "Envie para a próxima edição: escreva para <strong>richard@decent.partners</strong> com <strong>[Decent]</strong> no assunto.", "months": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"], "space_reserved_title": "Espaço Reservado", "space_reserved_author": "Os Editores", "space_reserved_content": "Este espaço aguarda um futuro colaborador. Escreva para richard@decent.partners com [Decent] no assunto."}, "de": {"issue": "Ausgabe", "contents": "Inhalt", "story": "Beitrag", "chapter": "Kapitel", "no": "Nr.", "part": "Teil", "contributors": "Mitwirkende", "theme": "Thema", "blurb": "Decent ist ein monatliches Magazin, das aus Beiträgen eines verteilten Netzwerks von Mitarbeitenden zusammengestellt wird.", "submit": "Einreichung für die nächste Ausgabe: E-Mail an <strong>richard@decent.partners</strong> mit <strong>[Decent]</strong> im Betreff.", "months": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], "space_reserved_title": "Platz Reserviert", "space_reserved_author": "Die Redaktion", "space_reserved_content": "Dieser Platz wartet auf einen zukünftigen Beitragenden. E-Mail an richard@decent.partners mit [Decent] im Betreff."}, "it": {"issue": "Numero", "contents": "Sommario", "story": "Storia", "chapter": "Capitolo", "no": "N.", "part": "Parte", "contributors": "Collaboratori", "theme": "Tema", "blurb": "Decent è una rivista mensile composta da contributi di una rete distribuita di collaboratori.", "submit": "Invia per il prossimo numero: scrivi a <strong>richard@decent.partners</strong> con <strong>[Decent]</strong> nell'oggetto.", "months": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"], "space_reserved_title": "Spazio Riservato", "space_reserved_author": "I Redattori", "space_reserved_content": "Questo spazio attende un futuro collaboratore. Scrivi a richard@decent.partners con [Decent] nell'oggetto."}, "zh": {"issue": "期", "contents": "目录", "story": "故事", "chapter": "章节", "no": "第", "part": "部分", "contributors": "贡献者", "theme": "主题", "blurb": "Decent 是一本月刊，汇集来自分布式协作网络的投稿。", "submit": "投稿下一期：发送邮件至 <strong>richard@decent.partners</strong>，主题包含 <strong>[Decent]</strong>。", "months": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"], "space_reserved_title": "预留空间", "space_reserved_author": "编辑部", "space_reserved_content": "此处等待未来的投稿人。请发邮件至 richard@decent.partners，主题包含 [Decent]。"}};
+  var LABELS={"en": "EN", "es": "ES", "fr": "FR", "pt": "PT", "de": "DE", "it": "IT", "zh": "中文"};
+  var defaultLang="en";
+  var cur=localStorage.getItem("dm-lang")||defaultLang;
+  function applyLang(l){
+    var t=T[l]||T[defaultLang];
+    cur=l;
+    localStorage.setItem("dm-lang",l);
+    document.getElementById("root-html").lang=l;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var k=el.dataset.i18n;
+      if(t[k]!==undefined)el.textContent=t[k];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function(el){
+      var k=el.dataset.i18nHtml;
+      if(t[k]!==undefined)el.innerHTML=t[k];
+    });
+    document.querySelectorAll("[data-i18n-date]").forEach(function(el){
+      var d=el.dataset.i18nDate;
+      var parts=d.split("-");
+      if(parts.length>=2){
+        var m=parseInt(parts[1],10)-1;
+        var y=parts[0];
+        var months=t.months||T[defaultLang].months;
+        el.textContent=months[m]+" "+y;
+      }
+    });
+    document.querySelectorAll("#lang-picker button").forEach(function(b){
+      b.classList.toggle("active",b.dataset.lang===l);
+    });
+  }
+  var picker=document.getElementById("lang-picker");
+  Object.keys(LABELS).forEach(function(l){
+    var b=document.createElement("button");
+    b.textContent=LABELS[l];
+    b.dataset.lang=l;
+    b.onclick=function(){applyLang(l);};
+    picker.appendChild(b);
+  });
+  applyLang(cur);
+})();
+</script>
+</body></html>
